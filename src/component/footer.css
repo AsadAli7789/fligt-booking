@@ -1,0 +1,10 @@
+.footer-1{
+position: relative;
+margin-bottom: -18vh;
+}
+@media only screen and (max-width: 786px) {
+    .footer-1{
+        position: relative;
+        margin-bottom: 0px;
+        }
+  }
