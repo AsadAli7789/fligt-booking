@@ -1,0 +1,91 @@
+#sec1{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/Rectangle%2031.png?alt=media&token=2c5bf3ef-5804-4748-87a8-0c4d8b126396");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn1{
+    border-bottom: 5px solid #8DD3BB;
+    margin-top: 10px;
+}
+
+#centeredbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-bottom 0.3s ease, transform 0.3s ease;
+    padding: 10px 20px; /* Adjust the padding as needed */
+
+
+  
+  }
+#centeredbutton svg {
+    margin-right: 8px; /* Space between icon and text */
+  }
+
+
+
+  /* From Uiverse.io by kamehame-ha */ 
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+ 
+ 
+}
+
+.coolinput label.text {
+  font-size: 14.5px;
+  font-weight: 700;
+  position: relative;
+  top: .8rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: white;
+  width: fit-content;
+}
+
+.input1 {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  height: 5.6vh;
+  width: 18vw;
+  border-radius:5px;
+  background: white;
+  border: 2px solid black;
+}
+
+.coolinput1 {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+ 
+ 
+}
+
+.coolinput1 label.text {
+  font-size: 14.5px;
+  font-weight: 700;
+  position: relative;
+  top: .8rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: white;
+  width: fit-content;
+}
+
+.input2 {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  height: 5.6vh;
+  width: 7.292vw;
+  background: white;
+  border-radius:5px;
+
+  border: 2px solid black;
+}
+
+
+
+
