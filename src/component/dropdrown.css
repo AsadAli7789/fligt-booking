@@ -1,0 +1,39 @@
+.slider {
+    display: inline;
+    -webkit-appearance: none;
+    width: 50%;
+    height: 8px;
+    background: black   ;
+    border-radius: 5px;
+    outline: none;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4a90e2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4a90e2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+input:checked {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+
+
+  }
+
+  input[type="checkbox"] {
+  outline: 2px solid black;
+  width: 20px;
+border-radius: 20px;
+    height: 20px;
+  }

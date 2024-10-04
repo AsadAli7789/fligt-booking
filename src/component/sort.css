@@ -1,0 +1,7 @@
+.bord{
+    border-bottom: 5px solid #8DD3BB;
+    transition: .5s;
+}
+.trans{
+    transition: .5s;
+}

@@ -12,14 +12,16 @@ import Sec3 from './component/sec3'
 import Sec4 from './component/sec4'
 import Sec5 from './component/sec5'
 import Sec6 from './component/sec6'
-import DropdownWithCheckboxes from './component/drop-down'
-
+import Dropdown from './component/dropdown'
+import Sllider from './component/slider'
+import Sort from './component/sort'
+import Card from './component/card'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <DropdownWithCheckboxes/>
+<Card/>    
     </>
   )
 }
