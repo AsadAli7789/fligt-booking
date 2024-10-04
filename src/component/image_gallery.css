@@ -1,0 +1,11 @@
+#inpt{
+    appearance: none;
+    border: none;
+   outline: none;
+border-radius: 5px;
+-webkit-appearance: none;
+
+}
+#inpt[type="checkbox"]:checked {
+    background-color: red; /* Background color when checked */
+}

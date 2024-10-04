@@ -16,12 +16,15 @@ import Dropdown from './component/dropdown'
 import Sllider from './component/slider'
 import Sort from './component/sort'
 import Card from './component/card'
+import Image_galery from './component/image_gallery'
+import Input from './component/input'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-<Card/>    
+    
+<Image_galery/>    
     </>
   )
 }
