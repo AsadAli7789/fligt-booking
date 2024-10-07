@@ -6,8 +6,8 @@ export default function Last_sec(){
     return<>
     
     
-    <div className="w-[64.167vw] border black mx-auto">
-    <div>
+    <div className="w-[65.167vw]  mx-auto mt-6">
+    <div className="mb-10">
         <span  className='text-[14px]  mx-1'>Turkey</span><svg width="16" height="16" className='inline' viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.75">
 <path d="M6 3.5L10.5 8L6 12.5" stroke="#112211" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,13 +41,13 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
     <div className=' flex items-end justify-end flex-2 px-6 flex-col flex'>
 <div className='text-[32px] text-black font-[700]'>$240</div>
 <div>
-<button  className='border py-[16px] px-4 mx-1 '>
+<button  className=' py-[16px] px-4 mx-1 '>
 <svg className='w-[15px] h-[11px]' viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.1866 12.915L11.2024 12.9239L11.215 12.9107C11.4455 12.6697 11.7225 12.4778 12.0292 12.3468C12.336 12.2158 12.6661 12.1483 12.9996 12.1484C13.5168 12.1484 14.0211 12.3103 14.4417 12.6114C14.8622 12.9126 15.1779 13.3378 15.3445 13.8275C15.511 14.3172 15.5201 14.8468 15.3704 15.3419C15.2206 15.837 14.9197 16.2728 14.5097 16.5881C14.0997 16.9034 13.6012 17.0825 13.0843 17.1001C12.5673 17.1178 12.0578 16.9731 11.6273 16.6865C11.1968 16.3998 10.8668 15.9855 10.6837 15.5018C10.5005 15.0181 10.4735 14.4891 10.6062 13.9892L10.6109 13.9717L10.5951 13.9628L4.81383 10.71L4.798 10.7011L4.78543 10.7142C4.44333 11.0709 4.00234 11.3171 3.51918 11.4211C3.03602 11.5251 2.5328 11.4822 2.07425 11.2978C1.6157 11.1135 1.22279 10.7961 0.946072 10.3866C0.669354 9.97714 0.521484 9.49422 0.521484 9C0.521484 8.50578 0.669354 8.02286 0.946072 7.61336C1.22279 7.20387 1.6157 6.88654 2.07425 6.70218C2.5328 6.51783 3.03603 6.47489 3.51918 6.57889C4.00234 6.68289 4.44333 6.92907 4.78543 7.28575L4.798 7.29887L4.81383 7.28996L10.5951 4.03722L10.6109 4.02832L10.6062 4.01076C10.4516 3.4303 10.5139 2.81338 10.7815 2.27558C11.0491 1.73777 11.5036 1.31598 12.0599 1.08922C12.6161 0.862465 13.236 0.846301 13.8033 1.04376C14.3706 1.24122 14.8465 1.63875 15.1418 2.16188C15.437 2.68501 15.5314 3.29784 15.4073 3.88557C15.2831 4.4733 14.9489 4.9956 14.4673 5.35462C13.9857 5.71364 13.3897 5.88475 12.791 5.83589C12.1923 5.78703 11.6319 5.52155 11.2149 5.0892L11.2023 5.07616L11.1866 5.08504L5.4053 8.33778L5.38947 8.34668L5.39415 8.36423C5.50508 8.78082 5.50508 9.21918 5.39415 9.63577L5.38947 9.65332L5.4053 9.66222L11.1866 12.915Z" fill="black" stroke="#112211" stroke-width="0.046875"/>
 </svg>
 
 </button>
-<button className='border px-8 text-[14px] font-[600] bg-[#8DD3BB]  mx-1 py-[11.5px]'>Download now</button>
+<button className='px-8 text-[14px] font-[600] bg-[#8DD3BB]  mx-1 py-[11.5px]'>Download now</button>
 </div>
 
     </div>
@@ -60,8 +60,8 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-   <div className="border w-full  border-black flex">
-<div className="border border-black w-[20%] px-8 py-4 h-fit">
+   <div className=" w-full  border-black flex mt-4 bg-white" >
+<div className="border border-[#EAEAEA] w-[20%] px-8 py-7 h-fit rounded-xl bg-[#EBF6F2]">
     <div>
         <h1 className="text-[32px] font-[600] leading-[40px] my-1">12:00 pm</h1>
         <h1 className="text-[12px] font-[500] leading-[14px] my-1">Newark(EWR)</h1>
@@ -75,10 +75,11 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
         <h1 className="text-[12px] font-[500] leading-[14px] my-1">Newark(EWR)</h1>
     </div>
 </div>
-<div className="border border-black w-[50%] ">
+<div className="border border-[#EAEAEA] w-[50%] rounded-xl ">
 
-    <div className="flex  justify-between border p-4 border-black  items-center">
-        <div className="flex border border-black  w-fit justify-center items-center">
+    <div className="flex  justify-between
+     p-4 border-black  items-center bg-[#8DD3BB] ">
+        <div className="flex   w-fit justify-center items-center">
             <div className=" flex items-center border-[2px] border-white w-fit rounded-full">
             <Avatar size={50} src="https://s3-alpha-sig.figma.com/img/de42/3158/13dc5b2e20dc60002c5ebc10bec549e3?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UqdXOWTZtIcgIAoz5z0LGGNzWaTn-VsNTj3mhb99re7cylsrTDaGhCiArrk5yVKevRS6eRjQo72AEmpaGshYJdMMJHBdwnvg9A2uGlEZNtAA1cILZOztz-osv1ODNYwMg8n93aHPRSNWL3ban7MsA1HJWN2mfFw4xgj8Nq4K2RtxxMgDsQhzALyafl9VjF-qdFCEIfzCT2Kb2gJXxTK0YW2rnv0JzI1VDHZwLHJFiX2X3MDz2n6v3fpDRNi9w9HlJA-RL~4kkhsOr6IgL-orIa-052DP2DOFu6Z2BIkkmJNjY65XUsVGGdD2Vqb5mW99jF57bCh575RL0S5-aPjvig__"  />
             </div>
@@ -91,8 +92,8 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
     </div>
 
 
-    <div className="border border-black w-full flex p-6">
-    <div className="flex w-fit border border-black mx-auto ">
+    <div className=" w-full flex p-6">
+    <div className="flex w-fit  mx-auto ">
         < div>
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="32" rx="4" fill="#EBF6F2"/>
@@ -112,7 +113,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-    <div className="flex w-fit border border-black mx-auto">
+    <div className="flex w-fit  mx-auto">
         < div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="32" rx="4" fill="#EBF6F2"/>
@@ -133,7 +134,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-    <div className="flex w-fit border border-black mx-auto">
+    <div className="flex w-fit  mx-auto">
         < div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="32" rx="4" fill="#EBF6F2"/>
@@ -156,7 +157,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-    <div className="flex w-fit border border-black mx-auto ">
+    <div className="flex w-fit  mx-auto ">
         < div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="32" rx="4" fill="#EBF6F2"/>
@@ -187,7 +188,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-<div className="border border-red-400 flex justify-between h-fit w-full">
+<div className=" flex justify-between h-fit w-full pt-10">
 
     <div className="">
         <h1 className="text-[32px] leading-[40px] font-[600]">EK</h1>
@@ -222,8 +223,8 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 </div>
-<div className="border border-black w-[30%] h-fit ">
-    <img src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/Frame%20239.png?alt=media&token=cc00f78e-a318-419e-8018-fea7e2b89516" alt="" />
+<div className=" w-[30%] h-fit rounded-lg rounded-xl border border-[#EAEAEA] ">
+    <img className="h-[309px]" src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/Frame%202608715.png?alt=media&token=692befb7-0897-4293-ae2f-2b0c224968a0" alt="" />
 </div>
    </div>
 
@@ -235,21 +236,21 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-<div className="w-full border border-black">
-    <div className="text-[24px] leading-[30px] font-[600] ">Terms and Conditions</div>
+<div className="w-full  mt-4">
+    <div className="text-[24px] leading-[30px] font-[600]   my-3">Terms and Conditions</div>
     <div className="text-[20px] leading-[24px] font-[500]  my-3">Payments</div>
     <ol className="">
         <li className=" list-disc text-[14px] leading-[20px] font-[400] my-4">If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes. </li>
         
         
-        <li className="text-[14px] leading-[20px] font-[400] my-4">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
+        <li className="text-[14px] list-disc leading-[20px] font-[400] my-4">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
     
-        <li className="text-[14px] leading-[20px] font-[400] my-4">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
+        <li className="text-[14px] list-disc leading-[20px] font-[400] my-4">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
 
     </ol>
 
     <div className="text-[20px] leading-[40px] font-[400] my-2">Contact Us</div>
-    <ol>
+    <ol className=""> 
         <li className="text-[14px] leading-[20px] font-[400] my-1">If you have any questions about our Website or our Terms of Use, please contact:</li>
         <li className="text-[14px] leading-[20px] font-[400] my-1">Golobe Group Q.C.S.C</li>
         <li className="text-[14px] leading-[20px] font-[400] my-1">Golobe Tower</li>

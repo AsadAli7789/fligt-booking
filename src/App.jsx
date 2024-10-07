@@ -30,11 +30,11 @@ function App() {
   return (
     <>
 
-
+{/* 
 <Sec1/>
 <Sec2/>
 <Sec3/>
-<Sec4/>
+<Sec4/> */}
 {/* <Last_sec/> */}
 
 {/* <Card_2/> */}
@@ -43,9 +43,9 @@ function App() {
 {/* <Card_2_part_2/> */}
 
 {/* <Moddal/> */}
-{/* <Navbar/>
-<Image_galery/>    
-<Footer/> */}
+<Navbar/>
+{/* <Image_galery/>     */}
+{/* <Footer/> */}
     </>
   )
 }
