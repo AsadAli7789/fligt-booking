@@ -31,11 +31,11 @@ function App() {
     <>
 
 
-{/* <Sec1/> */}
-{/* <Sec2/> */}
-{/* <Sec3/>
-<Sec4/> */}
-<Last_sec/>
+<Sec1/>
+<Sec2/>
+<Sec3/>
+<Sec4/>
+{/* <Last_sec/> */}
 
 {/* <Card_2/> */}
 

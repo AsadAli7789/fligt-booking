@@ -61,7 +61,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
    <div className="border w-full  border-black flex">
-<div className="border border-black w-[20%] p-6 ">
+<div className="border border-black w-[20%] px-8 py-4 h-fit">
     <div>
         <h1 className="text-[32px] font-[600] leading-[40px] my-1">12:00 pm</h1>
         <h1 className="text-[12px] font-[500] leading-[14px] my-1">Newark(EWR)</h1>
@@ -92,7 +92,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
     <div className="border border-black w-full flex p-6">
-    <div className="flex w-fit border border-black mx-auto pr-4">
+    <div className="flex w-fit border border-black mx-auto ">
         < div>
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="32" rx="4" fill="#EBF6F2"/>
@@ -112,17 +112,18 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-    <div className="flex w-fit border border-black mx-auto pr-4">
+    <div className="flex w-fit border border-black mx-auto">
         < div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="32" rx="4" fill="#EBF6F2"/>
 <path d="M16 7.75C11.4439 7.75 7.75 11.4439 7.75 16C7.75 20.5561 11.4439 24.25 16 24.25C20.5561 24.25 24.25 20.5561 24.25 16C24.25 11.4439 20.5561 7.75 16 7.75ZM19.8077 17.2692H16C15.8317 17.2692 15.6703 17.2024 15.5513 17.0834C15.4322 16.9643 15.3654 16.8029 15.3654 16.6346V10.9231C15.3654 10.7548 15.4322 10.5933 15.5513 10.4743C15.6703 10.3553 15.8317 10.2885 16 10.2885C16.1683 10.2885 16.3297 10.3553 16.4487 10.4743C16.5678 10.5933 16.6346 10.7548 16.6346 10.9231V16H19.8077C19.976 16 20.1374 16.0669 20.2564 16.1859C20.3754 16.3049 20.4423 16.4663 20.4423 16.6346C20.4423 16.8029 20.3754 16.9643 20.2564 17.0834C20.1374 17.2024 19.976 17.2692 19.8077 17.2692Z" fill="#8DD3BB"/>
 </svg>
 
+
 </div>
 <div className="ml-2">
-        <h1 className="text-[14px] font-[600] leading-[17px]  my-0 py-0">Date</h1>
-        <h1 className="text-[12px] font-[400] leading-[8px] my-0 py-0 ">Newark(EWR)</h1>
+        <h1 className="text-[14px] font-[600] leading-[17px]  my-0 py-0 pr-2" >Flight time</h1>
+        <h1 className="text-[12px] font-[400] leading-[8px] my-0 py-0 ">12:00</h1>
         </div>
     </div>
 
@@ -132,17 +133,18 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-    <div className="flex w-fit border border-black mx-auto pr-4">
+    <div className="flex w-fit border border-black mx-auto">
         < div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="32" rx="4" fill="#EBF6F2"/>
 <path d="M20.5222 7.75C20.8302 7.75 21.1255 7.87233 21.3433 8.09008C21.561 8.30783 21.6833 8.60317 21.6833 8.91111V24.0056H23.425C23.579 24.0056 23.7266 24.0667 23.8355 24.1756C23.9444 24.2845 24.0056 24.4321 24.0056 24.5861C24.0056 24.7401 23.9444 24.8878 23.8355 24.9966C23.7266 25.1055 23.579 25.1667 23.425 25.1667H8.33056C8.17658 25.1667 8.02892 25.1055 7.92004 24.9966C7.81117 24.8878 7.75 24.7401 7.75 24.5861C7.75 24.4321 7.81117 24.2845 7.92004 24.1756C8.02892 24.0667 8.17658 24.0056 8.33056 24.0056H10.0722V8.91111C10.0722 8.60317 10.1946 8.30783 10.4123 8.09008C10.6301 7.87233 10.9254 7.75 11.2333 7.75H20.5222ZM18.2 18.2C18.5079 18.2 18.8033 18.0777 19.021 17.8599C19.2388 17.6422 19.3611 17.3468 19.3611 17.0389C19.3611 16.7309 19.2388 16.4356 19.021 16.2179C18.8033 16.0001 18.5079 15.8778 18.2 15.8778C17.8921 15.8778 17.5967 16.0001 17.379 16.2179C17.1612 16.4356 17.0389 16.7309 17.0389 17.0389C17.0389 17.3468 17.1612 17.6422 17.379 17.8599C17.5967 18.0777 17.8921 18.2 18.2 18.2Z" fill="#8DD3BB"/>
 </svg>
 
+
 </div>
 <div className="ml-2">
-        <h1 className="text-[14px] font-[600] leading-[17px]  my-0 py-0">Date</h1>
-        <h1 className="text-[12px] font-[400] leading-[8px] my-0 py-0 ">Newark(EWR)</h1>
+        <h1 className="text-[14px] font-[600] leading-[17px]  my-0 py-0 pr-2">Gate</h1>
+        <h1 className="text-[12px] font-[400] leading-[8px] my-0 py-0 ">A12</h1>
         </div>
     </div>
 
@@ -154,7 +156,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-    <div className="flex w-fit border border-black mx-auto pr-4">
+    <div className="flex w-fit border border-black mx-auto ">
         < div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="32" rx="4" fill="#EBF6F2"/>
@@ -163,8 +165,8 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 </div>
 <div className="ml-2">
-        <h1 className="text-[14px] font-[600] leading-[17px]  my-0 py-0">Date</h1>
-        <h1 className="text-[12px] font-[400] leading-[8px] my-0 py-0 ">Newark(EWR)</h1>
+        <h1 className="text-[14px] font-[600] leading-[17px]  my-0 py-0 pr-2">Seat</h1>
+        <h1 className="text-[12px] font-[400] leading-[8px] my-0 py-0 ">128</h1>
         </div>
     </div>
 
@@ -172,6 +174,10 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
+
+
+
+
     </div>
 
 
@@ -181,15 +187,24 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
+<div className="border border-red-400 flex justify-between h-fit w-full">
 
-
-<div className="border border-red-400 w-full">
-
-    <div>
-        <h1></h1>
-        <h1></h1>
+    <div className="">
+        <h1 className="text-[32px] leading-[40px] font-[600]">EK</h1>
+        <h1 className="text-[12px] leading-[20px] font-[500]">ABC12345</h1>
     </div>
-    <div>
+    <div className="">
+    <svg width="248" height="81" viewBox="0 0 248 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 16V65H18.0052V16H16ZM19.7227 16V65H20.2045V16H19.7227ZM20.8804 16V65H22.4047V16H20.8804ZM23.9535 16V65H24.604V16H23.9535ZM26.3225 16V65H26.8033V16H26.3225ZM27.0101 16V65H29.0026V16H27.0101ZM30.1983 16V65H31.2019V16H30.1983ZM33.1788 16V65H33.4012V16H33.1788ZM34.9314 16V65H35.6014V16H34.9314ZM37.3189 16V65H37.8007V16H37.3189ZM38.0075 16V65H40V16H38.0075Z" fill="#112211"/>
+<path d="M40 16V65H42.0052V16H40ZM43.7227 16V65H44.2045V16H43.7227ZM44.8804 16V65H46.4047V16H44.8804ZM47.9535 16V65H48.604V16H47.9535ZM50.3225 16V65H50.8033V16H50.3225ZM51.0101 16V65H53.0026V16H51.0101ZM54.1983 16V65H55.2019V16H54.1983ZM57.1788 16V65H57.4012V16H57.1788ZM58.9314 16V65H59.6014V16H58.9314ZM61.3189 16V65H61.8007V16H61.3189ZM62.0075 16V65H64V16H62.0075Z" fill="#112211"/>
+<path d="M64 16V65H66.0052V16H64ZM67.7227 16V65H68.2045V16H67.7227ZM68.8804 16V65H70.4047V16H68.8804ZM71.9535 16V65H72.604V16H71.9535ZM74.3225 16V65H74.8033V16H74.3225ZM75.0101 16V65H77.0026V16H75.0101ZM78.1983 16V65H79.2019V16H78.1983ZM81.1788 16V65H81.4012V16H81.1788ZM82.9314 16V65H83.6014V16H82.9314ZM85.3189 16V65H85.8007V16H85.3189ZM86.0075 16V65H88V16H86.0075Z" fill="#112211"/>
+<path d="M88 16V65H90.0052V16H88ZM91.7227 16V65H92.2045V16H91.7227ZM92.8804 16V65H94.4047V16H92.8804ZM95.9535 16V65H96.604V16H95.9535ZM98.3225 16V65H98.8033V16H98.3225ZM99.0101 16V65H101.003V16H99.0101ZM102.198 16V65H103.202V16H102.198ZM105.179 16V65H105.401V16H105.179ZM106.931 16V65H107.601V16H106.931ZM109.319 16V65H109.801V16H109.319ZM110.007 16V65H112V16H110.007Z" fill="#112211"/>
+<path d="M112 16V65H114.005V16H112ZM115.723 16V65H116.204V16H115.723ZM116.88 16V65H118.405V16H116.88ZM119.954 16V65H120.604V16H119.954ZM122.323 16V65H122.803V16H122.323ZM123.01 16V65H125.003V16H123.01ZM126.198 16V65H127.202V16H126.198ZM129.179 16V65H129.401V16H129.179ZM130.931 16V65H131.601V16H130.931ZM133.319 16V65H133.801V16H133.319ZM134.007 16V65H136V16H134.007Z" fill="#112211"/>
+<path d="M136 16V65H138.005V16H136ZM139.723 16V65H140.204V16H139.723ZM140.88 16V65H142.405V16H140.88ZM143.954 16V65H144.604V16H143.954ZM146.323 16V65H146.803V16H146.323ZM147.01 16V65H149.003V16H147.01ZM150.198 16V65H151.202V16H150.198ZM153.179 16V65H153.401V16H153.179ZM154.931 16V65H155.601V16H154.931ZM157.319 16V65H157.801V16H157.319ZM158.007 16V65H160V16H158.007Z" fill="#112211"/>
+<path d="M160 16V65H162.005V16H160ZM163.723 16V65H164.204V16H163.723ZM164.88 16V65H166.405V16H164.88ZM167.954 16V65H168.604V16H167.954ZM170.323 16V65H170.803V16H170.323ZM171.01 16V65H173.003V16H171.01ZM174.198 16V65H175.202V16H174.198ZM177.179 16V65H177.401V16H177.179ZM178.931 16V65H179.601V16H178.931ZM181.319 16V65H181.801V16H181.319ZM182.007 16V65H184V16H182.007Z" fill="#112211"/>
+<path d="M184 16V65H186.005V16H184ZM187.723 16V65H188.204V16H187.723ZM188.88 16V65H190.405V16H188.88ZM191.954 16V65H192.604V16H191.954ZM194.323 16V65H194.803V16H194.323ZM195.01 16V65H197.003V16H195.01ZM198.198 16V65H199.202V16H198.198ZM201.179 16V65H201.401V16H201.179ZM202.931 16V65H203.601V16H202.931ZM205.319 16V65H205.801V16H205.319ZM206.007 16V65H208V16H206.007Z" fill="#112211"/>
+<path d="M208 16V65H210.005V16H208ZM211.723 16V65H212.204V16H211.723ZM212.88 16V65H214.405V16H212.88ZM215.954 16V65H216.604V16H215.954ZM218.323 16V65H218.803V16H218.323ZM219.01 16V65H221.003V16H219.01ZM222.198 16V65H223.202V16H222.198ZM225.179 16V65H225.401V16H225.179ZM226.931 16V65H227.601V16H226.931ZM229.319 16V65H229.801V16H229.319ZM230.007 16V65H232V16H230.007Z" fill="#112211"/>
+</svg>
 
     </div>
 </div>
@@ -197,8 +212,6 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 
-``
-
 
 
 
@@ -209,8 +222,47 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 
 
 </div>
-<div className="border border-black w-[30%] "></div>
+<div className="border border-black w-[30%] h-fit ">
+    <img src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/Frame%20239.png?alt=media&token=cc00f78e-a318-419e-8018-fea7e2b89516" alt="" />
+</div>
    </div>
+
+
+
+
+
+
+
+
+
+<div className="w-full border border-black">
+    <div className="text-[24px] leading-[30px] font-[600] ">Terms and Conditions</div>
+    <div className="text-[20px] leading-[24px] font-[500]  my-3">Payments</div>
+    <ol className="">
+        <li className=" list-disc text-[14px] leading-[20px] font-[400] my-4">If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes. </li>
+        
+        
+        <li className="text-[14px] leading-[20px] font-[400] my-4">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
+    
+        <li className="text-[14px] leading-[20px] font-[400] my-4">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
+
+    </ol>
+
+    <div className="text-[20px] leading-[40px] font-[400] my-2">Contact Us</div>
+    <ol>
+        <li className="text-[14px] leading-[20px] font-[400] my-1">If you have any questions about our Website or our Terms of Use, please contact:</li>
+        <li className="text-[14px] leading-[20px] font-[400] my-1">Golobe Group Q.C.S.C</li>
+        <li className="text-[14px] leading-[20px] font-[400] my-1">Golobe Tower</li>
+        <li className="text-[14px] leading-[20px] font-[400] my-1">P.O. Box: 22550</li>
+        <li className="text-[14px] leading-[20px] font-[400] my-1">Doha, State of Qatar</li>
+         <li className="text-[14px] leading-[20px] font-[400] my-1">Further contact details can be found at  golobe.com/help</li>
+    </ol>
+
+</div>
+
+
+
+
    
     </div>
     
