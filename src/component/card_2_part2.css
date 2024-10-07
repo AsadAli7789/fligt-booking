@@ -1,0 +1,27 @@
+.input2 {
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    height: 5.6vh;
+    background: white;
+    border: 1px solid black;
+  }
+  
+  .coolinput1 {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+   
+   
+  }
+  
+  .coolinput1 label.text {
+    font-size: 14.5px;
+    font-weight: 400;
+    position: relative;
+    top: .8rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: white;
+    width: fit-content;
+  }

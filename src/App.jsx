@@ -18,13 +18,34 @@ import Sort from './component/sort'
 import Card from './component/card'
 import Image_galery from './component/image_gallery'
 import Input from './component/input'
+import Card_2 from './component/card_2'
+import Card_2_part_1 from './component/card_2part_1'
+import Card_2_part_2 from './component/card_2_part2'
+import Moddal from './component/modal'
+import Last_sec from './component/last_sec'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    
+
+
+{/* <Sec1/> */}
+{/* <Sec2/> */}
+{/* <Sec3/>
+<Sec4/> */}
+<Last_sec/>
+
+{/* <Card_2/> */}
+
+{/* <Card_2_part_1/> */}
+{/* <Card_2_part_2/> */}
+
+{/* <Moddal/> */}
+{/* <Navbar/>
 <Image_galery/>    
+<Footer/> */}
     </>
   )
 }
