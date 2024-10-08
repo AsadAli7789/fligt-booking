@@ -23,13 +23,15 @@ import Card_2_part_1 from './component/card_2part_1'
 import Card_2_part_2 from './component/card_2_part2'
 import Moddal from './component/modal'
 import Last_sec from './component/last_sec'
+import Example2 from './component/nav-bar-2'
+import ThemeContextProvider, { ThemeContext } from './context/FlightContext'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-
+<ThemeContextProvider>
 {/* 
 <Sec1/>
 <Sec2/>
@@ -43,9 +45,12 @@ function App() {
 {/* <Card_2_part_2/> */}
 
 {/* <Moddal/> */}
-<Navbar/>
+{/* <Navbar/> */}
+<Example2/>
 {/* <Image_galery/>     */}
 {/* <Footer/> */}
+    
+</ThemeContextProvider>   
     </>
   )
 }
