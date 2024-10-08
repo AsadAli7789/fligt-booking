@@ -32,11 +32,11 @@ function App() {
   return (
     <>
 <ThemeContextProvider>
-{/* 
+
 <Sec1/>
 <Sec2/>
 <Sec3/>
-<Sec4/> */}
+<Sec4/>
 {/* <Last_sec/> */}
 
 {/* <Card_2/> */}
@@ -46,7 +46,7 @@ function App() {
 
 {/* <Moddal/> */}
 {/* <Navbar/> */}
-<Example2/>
+{/* <Example2/> */}
 {/* <Image_galery/>     */}
 {/* <Footer/> */}
     

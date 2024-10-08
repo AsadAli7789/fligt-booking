@@ -64,7 +64,7 @@ export default function Sec1(){
         
     </div>
     
-<div className=' w-[70vw] relative mt-[-15vh] pb-6 rounded-[10px] shadow-lg bg-white mx-auto  rounded-[30p]'>
+<div className=' w-[70vw] relative mt-[-15vh] pb-6  rounded-[10px] shadow-custom bg-white mx-auto  rounded-[30p]'>
     <div className='navbar'>
 <div className="navbar-start mt-3">
   <button id='centeredbutton' className={btn==true?"btn1 h-[4.8vh] ":" h-[4.8vh] "}  onClick={()=>{setbtn(true)}} >
