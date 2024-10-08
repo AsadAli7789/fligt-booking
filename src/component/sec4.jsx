@@ -10,9 +10,9 @@ export default function sec4(){
     const [hidden2 ,sethidden2]= useState(true)
 
     return<>
-    <div className="flex ">
-  <div className="relative top-[10px] border border-black  w-[20.135vw]  ">
-          <div className=" border-[4px]   border-red-900 h-full w-[20.135vw] rounded-[30px] px-4 relative  pt-5  ">
+    <div className="flex mt-10 justify-end mr-5">
+  <div className=" rounded-[30px]  w-[20.135vw] mx-3  ">
+          <div className="   h-full w-[20.135vw] rounded-[30px] shadow-custom px-4 relative  pt-5  ">
     <div className="">
         <h1 className="leading-[31px] text-[24px] mb-4">“A real sense of community, nurtured”</h1>
        <div className=" flex pt-3 flex flex-col h-[100px]  "><h2 className="leading-[17.5px] text-[14px] inline">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for <span className={ hidden==true?"hidden":"" }>helping me always, even when I was out of the country. And always available when needed.</span></h2>
@@ -48,8 +48,8 @@ sethidden(true)
      </div>
 
 </div>
-<div className="relative top-[10px] border border-black  w-[20.135vw]  ">
-          <div className=" border-[4px]   border-red-900 h-full w-[20.135vw] rounded-[30px] px-4 relative  pt-5  ">
+<div className=" rounded-[30px] shadow-custom  mx-5  w-[20.135vw]  ">
+          <div className=" h-full w-[20.135vw] rounded-[30px] px-4 relative  pt-5  ">
     <div className="">
         <h1 className="leading-[31px] text-[24px] mb-4">“A real sense of community, nurtured”</h1>
        <div className=" flex pt-3 flex flex-col h-[100px]  "><h2 className="leading-[17.5px] text-[14px] inline">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for <span className={ hidden2==true?"hidden":"" }>helping me always, even when I was out of the country. And always available when needed.</span></h2>
@@ -85,8 +85,8 @@ sethidden2(true)
      </div>
 
 </div>
-<div className="relative top-[10px] border border-black  w-[20.135vw]  ">
-          <div className=" border-[4px]   border-red-900 h-full w-[20.135vw] rounded-[30px] px-4 relative  pt-5  ">
+<div className=" rounded-[30px] shadow-custom  mx-5 w-[20.135vw]  ">
+          <div className="  h-full w-[20.135vw] rounded-[30px] px-4 relative  pt-5  ">
     <div className="">
         <h1 className="leading-[31px] text-[24px] mb-4">“A real sense of community, nurtured”</h1>
        <div className=" flex pt-3 flex flex-col h-[100px]  "><h2 className="leading-[17.5px] text-[14px] inline">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for <span className={ hidden1==true?"hidden":"" }>helping me always, even when I was out of the country. And always available when needed.</span></h2>
