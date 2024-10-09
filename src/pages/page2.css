@@ -1,0 +1,24 @@
+#page2 {
+    position: relative; /* Required for positioning the pseudo-element */
+    background-size: cover;
+    /* Uncomment this line if you want to use an image */
+    background-image: url("https://s3-alpha-sig.figma.com/img/8535/598d/d79d82bf9c6a77a53ab28436f5a42b70?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=o4NAMrFIUgtQNg05dqBNp6o7K4RAWI~HEfe8uQDfRwLu~5-QL0BIyA-gPWw1kapSYVcmIElWiBCG7jbfpllM4DrCSOcf-JvIBa-rzyOi69DCquD7IDXZSkysz2wrQB~~UPXsxTmDxqIkY42glabLi3Z85AACIeehYjZcDgpJKqK-2FxUMe0ku~rto9P4KftSA~~niMRh3CLWXkRaovHF-S~CNAitCb-3uTYKKjoVSpibc~~gl-mMbEiwqfyTGXcZ8cg7DkTPFDon1xiFt03ns1mxuIdIyCgTt17Qz-E6EtD0ldSMCTJarsUgrlTJHupEA0-HOiqB7CswXrvQc~KJrQ__");
+  
+}
+  
+  #page2::before {
+    content: ""; /* Necessary for the pseudo-element to be rendered */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    background: linear-gradient(90deg, rgba(0, 35, 77, 0.63) 11.46%, rgba(0, 35, 77, 0) 77.37%);
+    z-index: ; /* Make sure it's above the background image, if used */
+  }
+  #kol{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/Frame%202608705.png?alt=media&token=4ac630d4-92b3-4271-b775-0fe4ab158861");
+  }
+  

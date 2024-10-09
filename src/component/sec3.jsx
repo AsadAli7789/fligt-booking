@@ -2,7 +2,7 @@ import  "./sec3.css";
 export default function Sec3(){
     return<>
 
-<div className=' lg:h-[55.9vh] xl:h-[55.9vh] h-full  flex flex-col xl:flex-row lg:flex-col'>
+<div className='bg-no-repeat lg:h-[55.9vh] xl:h-[55.9vh] h-full  flex flex-col xl:flex-row lg:flex-col'>
     <div id='sec3' className=' h-full lg:w-[31.458vw] xl:w-[31.458vw] w-full  lg:mr-2 xl:mr-2  lg:ml-auto xl:ml-auto   rounded-[10px] border-black flex flex-col justify-end  items-center xl:pb-[3vh] lg:pb-[2vh]'>
         <div><h1 className='leading-[50px] text-[40px] text-white font-bold '>Flights</h1></div>
         <div><h2 className='leading-[18px] text-[16px] text-white mx-4 my-4 text-center '>Search Flights & Places Hire to our most popular destinations</h2></div>
@@ -12,7 +12,7 @@ export default function Sec3(){
 
 Show Filghts</button></div>
     </div>
-    <div id='sec4' className=' h-full lg:w-[31.458vw] xl:w-[31.458vw] w-full  lg:ml-2 xl:ml-2  lg:mr-auto xl:mr-auto   rounded-[10px] border-black flex flex-col justify-end  items-center pb-[3vh] tex'>
+    <div id='sec4' className=' bg-no-repeat	 h-full lg:w-[31.458vw] xl:w-[31.458vw] w-full  lg:ml-2 xl:ml-2  lg:mr-auto xl:mr-auto   rounded-[10px] border-black flex flex-col justify-end  items-center pb-[3vh] tex'>
         <div><h1 className='leading-[50px] text-[40px] text-white font-bold '>Flights</h1></div>
         <div><h2 className='leading-[18px] text-[16px] text-white  mx-4 my-4 text-center '>Search Flights & Places Hire to our most popular destinations</h2></div>
         <div>

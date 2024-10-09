@@ -25,32 +25,31 @@ import Moddal from './component/modal'
 import Last_sec from './component/last_sec'
 import Example2 from './component/nav-bar-2'
 import ThemeContextProvider, { ThemeContext } from './context/FlightContext'
-import Page2 from './pages/page2'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+
+
+
+
+
+import LoginPage from './component/login'
+import Page5 from './pages/page5'
+ function  App() {
+ 
+
+
+
+
+
+
+
+
 
   return (
     <>
 <ThemeContextProvider>
-
-<Sec1/>
-<Sec2/>
-<Sec3/>
-<Sec4/>
-{/* <Last_sec/> */}
-
-{/* <Card_2/> */}
-
-{/* <Card_2_part_1/> */}
-{/* <Card_2_part_2/> */}
-{/* <Page2/> */}
-{/* <Moddal/> */}
-{/* <Navbar/> */}
-{/* <Example2/> */}
-{/* <Image_galery/>     */}
-{/* <Footer/> */}
-    
+  {/* <Page5/> */}
+    <LoginPage/>
 </ThemeContextProvider>   
     </>
   )

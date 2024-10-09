@@ -3,7 +3,7 @@ import './sec2.css'
 export default function Sec2(){
   const [hidden,sethidden]= useState(true)
     return<>
-    <div className='flex justify-between w-[90vw] mx-auto'>
+    <div className='flex justify-between w-[64.167vw] mx-auto'>
       <div className=''>
     <h1 className='leading-[40px] text-[32px] font-bold'>Plan your perfect trip</h1>
 
@@ -33,8 +33,8 @@ sethidden(true)
 
 
 <div>
-<section data-aos="zoom-in-down" className="sec2 text-gray-600 body-font ">
-  <div className="sec2 container px-5 py-7 mx-auto">
+<section data-aos="zoom-in-down" className="sec2 w-[70vw] mx-auto text-gray-600 body-font ">
+  <div className="sec2  px-5 py-7 mx-auto">
    
     <div className="flex flex-wrap -m-4">
       
@@ -44,7 +44,7 @@ sethidden(true)
            
             <img src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/Rectangle%203.png?alt=media&token=81b16861-db77-47cf-85b2-552e37373f76" alt="" />
           </div>
-          <div className="flex-grow  my-auto ml-2">
+          <div className=" my-auto ml-2">
             <h1 className='text-[16px] mb-2'>Istanbul, Turkey</h1>
             <p className="leading-tight text-[14px] font-bold ">
             Flights . Hotels . Resorts

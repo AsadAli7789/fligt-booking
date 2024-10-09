@@ -10,7 +10,7 @@ export default function Sec1(){
     <>
     
     <div  id='sec1'
-    className=' mt-5 flex flex-col  lg:h-[75vh] rounded-[30px] lg:w-[90vw] mx-auto'
+    className=' mt-5 flex flex-col  lg:h-[65vh] rounded-[30px] xl:w-[90vw] mx-auto'
     >
 
 <div>
@@ -57,14 +57,14 @@ export default function Sec1(){
 </div>
 </div>
 <div className='flex flex-col lg:mt-[7.5vh] items-center'>
-    <h1 className='text-white text-[45px]  leading-tight'>Helping Others</h1>
-    <h1 className='text-white text-[80px]  leading-tight'>Live & Travel</h1>
-    <h1 className='text-white text-[23.3px]  leading-tight'>Special offers to suit your plan</h1>
+    <h1 className='text-white text-[6vw]  leading-tight'>Helping Others</h1>
+    <h1 className='text-white text-[6vw]  leading-tight'>Live & Travel</h1>
+    <h1 className='text-white text-[2vw]  leading-tight'>Special offers to suit your plan</h1>
 </div>
         
     </div>
     
-<div className=' w-[70vw] relative mt-[-15vh] pb-6  rounded-[10px] shadow-custom bg-white mx-auto  rounded-[30p]'>
+<div className=' w-[70vw] relative mt-[-12vh] pb-6  rounded-[10px] shadow-custom bg-white mx-auto  rounded-[30p]'>
     <div className='navbar'>
 <div className="navbar-start mt-3">
   <button id='centeredbutton' className={btn==true?"btn1 h-[4.8vh] ":" h-[4.8vh] "}  onClick={()=>{setbtn(true)}} >

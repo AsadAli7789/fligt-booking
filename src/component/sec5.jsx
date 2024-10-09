@@ -3,16 +3,19 @@ import './sec5.css'
 export default function Sec5() {
     return <>
 
-    <div className='flex w-[68vw] mx-auto '>
+    <div className='flex w-[70vw] mx-auto '>
 <div className='flex flex-col mr-[3vw] my-5'>
-    <div className=' text-[32px] leading-[40px]'>Fall into travel
+ 
+<div className=" flex mx-auto w-[70vw] mt-8 mx-auto justify-between">
+<div className='w-3/4'>
+        <h1 className="lg:text-[32px]   lg:leading-[40px] text-black lg:font-[600]">Fall into travel</h1>
+        <h1 className="lg:text-[16px]   lg:leading-[19px] text-black lg:font-[500]">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.</h1>
+    </div>
+    <div><button className="border border-black px-4 py-4">See All</button></div>
 </div>
-<div className='  text-[16px] leading-[20px]'>
-    Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.</div>
+
 </div>
-<div>
-    <button className=' w-[4.167vw] h-[4vh] ml-[2.5vw] my-5 border border-[#8DD3BB] py-auto px-auto'>see all</button>
-</div>
+
     </div>
         <div className='mx-auto rounded-[20px]   lg:h-[42vh] xl:h-[42vh]  justify-center  md:items-center sm:items-center    flex flex-col lg:flex-row  xl:flex-row'>
         <div  id='sec-div1' className=' h-[42vh] flex flex-col justify-end md:w-2/5 sm:w-4/5 w-full lg:mx-4 rounded-md px-4   lg:w-[25vw] xl:w-[15.417vw]'>
