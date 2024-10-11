@@ -1,37 +1,27 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { useForm } from "react-hook-form"
 import { getStorage,ref,getDownloadURL  ,uploadBytes  } from "firebase/storage";
 import {app} from '../utils/utils'
-import { getAuth,createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth,createUserWithEmailAndPassword,signOut } from "firebase/auth";
 import { collection, addDoc,getFirestore,getDocs } from "firebase/firestore"; 
+import { AuthContext } from "../context/UserContext";
 
 
 export default function LoginPage(){
     const { register, handleSubmit } = useForm();
     const [data,setdata] = useState()
 
-    
+    const {user1,setUser1} = useContext(AuthContext)
+
     const db = getFirestore(app);
 
-
-
-    const storage = getStorage(app);
+  const storage = getStorage(app);
+  
 
     const imageRef = ref(storage, `${new Date().getTime().toString()}/jpeg`);
     const auth = getAuth();
 
-    loop()
-
-
-async function loop(){
-    const querySnapshot = await getDocs(collection(db, "users"));
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data().name}`);
-    });
- 
- }   
-
-
+   
 
 async function Add(password,email1,uid,url){
     try {
@@ -42,6 +32,7 @@ async function Add(password,email1,uid,url){
           url: url,
         });
         console.log("Document written with ID: ", docRef.id);
+
       } catch (e) {
         console.error("Error adding document: ", e);
       }
@@ -51,7 +42,7 @@ async function Add(password,email1,uid,url){
 
 
 async function  createUser(auth, data){
-   const email1= data.email
+   const email1 = data.email
    const password= data.password
    const imag = data.pic[0].File
 
@@ -78,7 +69,15 @@ async function  createUser(auth, data){
       });
 }
   
+function logOut(){
+    signOut(auth).then(() => {
+console.log("userlog out")
 
+      })
+      .catch((error) => {
+      });
+      
+}
 
 
         
@@ -103,8 +102,7 @@ async function urL(imag,password,email1,uid){
 
 
 
-
-
+console.log(user1)
 
 
 
@@ -125,6 +123,8 @@ return<>
 
         <button className="border border-black">Asad</button>
     </form>
+    <button onClick={()=>{logOut()
+    }} className="border border-black p-5">logOut</button>
 
 
 

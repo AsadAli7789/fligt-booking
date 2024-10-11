@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -34,10 +34,14 @@ import ThemeContextProvider, { ThemeContext } from './context/FlightContext'
 
 import LoginPage from './component/login'
 import Page5 from './pages/page5'
+import {AuthContext, AuthContextProvider} from './context/UserContext'
+import LoginPage2 from './component/loginpage'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Page1 from './pages/page1'
+import Page2 from './pages/page2'
  function  App() {
  
-
-
+const user = useContext(AuthContext)
 
 
 
@@ -47,10 +51,21 @@ import Page5 from './pages/page5'
 
   return (
     <>
+    <AuthContextProvider>
 <ThemeContextProvider>
-  {/* <Page5/> */}
-    <LoginPage/>
+<BrowserRouter>
+<Routes>
+  <Route path='/' element={<Page1/>} ></Route>
+  <Route path='/page2' element={<Page2/>} ></Route>
+
+</Routes>
+</BrowserRouter>
+
+  
+ 
+  
 </ThemeContextProvider>   
+</AuthContextProvider>
     </>
   )
 }
