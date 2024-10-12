@@ -26,6 +26,7 @@ import Last_sec from './component/last_sec'
 import Example2 from './component/nav-bar-2'
 import ThemeContextProvider, { ThemeContext } from './context/FlightContext'
 
+import { AuthContext } from "./context/UserContext";
 
 
 
@@ -34,39 +35,55 @@ import ThemeContextProvider, { ThemeContext } from './context/FlightContext'
 
 import LoginPage from './component/login'
 import Page5 from './pages/page5'
-import {AuthContext, AuthContextProvider} from './context/UserContext'
+import { AuthContextProvider} from './context/UserContext'
 import LoginPage2 from './component/loginpage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Page1 from './pages/page1'
 import Page2 from './pages/page2'
+import Page4 from './pages/page4'
+import Page3 from './pages/page3'
+import Page6 from './pages/page6'
  function  App() {
  
-const user = useContext(AuthContext)
-
-
-
+  const {user1,setUser1} = useContext(AuthContext)
+console.log(user1)
+const length = Object.keys(user1).length;
 
 
 
 
   return (
     <>
-    <AuthContextProvider>
 <ThemeContextProvider>
-<BrowserRouter>
+  
+  {/* <LoginPage/> */}
+  
+<Page6/>
+{/* <Dropdown/> */}
+{/* <Card/> */}
+{/* <Sllider /> */}
+
+{/* <BrowserRouter>
 <Routes>
-  <Route path='/' element={<Page1/>} ></Route>
+
+  <Route path='/' element={ length==0?<Page1/>: 
+  <Page2/>} ></Route>
   <Route path='/page2' element={<Page2/>} ></Route>
+  <Route path='/page2/signup' element={<LoginPage/>}></Route>
+  <Route path='/page2/login' element={<LoginPage2/>}></Route>
+  <Route path='/page2/Page3' element={<Page3/>}></Route>
+  <Route path='/page2/Page4' element={<Page4/>}></Route>
+
+
+
 
 </Routes>
-</BrowserRouter>
+</BrowserRouter> */}
 
   
  
   
-</ThemeContextProvider>   
-</AuthContextProvider>
-    </>
+</ThemeContextProvider>       </>
   )
 }
 

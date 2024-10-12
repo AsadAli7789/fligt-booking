@@ -1,16 +1,26 @@
 import Asad from "../component/Datepicker";
 import Example from "../component/nav-bar";
-import { useState } from "react";
+import { useState,useContext } from "react";
 import './page2.css'
 import Footer from "../component/footer";
 import Sec5 from "../component/sec5";
 import Sec6 from "../component/sec6";
+import { AuthContext } from "../context/UserContext";
+import Example2 from "../component/nav-bar-2";
+
+
 export default function Page2(){
+  const {user1,setUser1} = useContext(AuthContext)
+  const length = Object.keys(user1).length;
+console.log(length)
+console.log(user1)
     const [btn , setbtn]= useState(true)
 
     return<>
 <div>
-<Example/>
+  {
+  length==0?<Example/>:<Example2/>}
+
 </div>
 
 

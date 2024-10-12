@@ -4,10 +4,13 @@ import Sec2 from "../component/sec2";
 import Sec3 from "../component/sec3";
 import Sec4 from "../component/sec4";
 
-
 export default function Page1(){
+
+
     return(
     <>
+
+    
     <div>
         <div className="mb-[5vh]">
         <Sec1/>

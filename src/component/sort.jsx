@@ -7,7 +7,7 @@ const [bord , setbord]=useState('first')
 
     return<>
     
-    <div className="w-[43.75vw] border rounded-lg shadow-custom  justify-center  flex">
+    <div className="w-[43.75vw] border rounded-lg shadow-custom  bg-white justify-center  flex">
 
 
 

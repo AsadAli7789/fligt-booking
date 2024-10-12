@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import './nav-bar.css'
+import { Link } from 'react-router-dom'
 
 export default function Example() {
 
@@ -39,13 +40,17 @@ const [btn , setbtn]= useState(true)
 
 </div>
   <div className="navbar-end py-1">
+    <Link to={"/page2/login"}>
     <button className="btn w-[5.417vw] h-[4.8vh] shadow-none border-none hover:bg-white bg-white mx-2 ">
      Login
     </button>
+    </Link>
+    <Link to={"/page2/signup"}>
     <button className="btn w-[5.417vw] text-[#FFFFFF] h-[4.8vh] bg-[#112211] ">
       
       sign up
     </button>
+    </Link>
   </div>
 </div>
 </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './image_gallery.css'
 import Input from './input'
 
@@ -43,7 +44,9 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 </svg>
 
 </button>
+<Link to={"/page2/Page4"}>
 <button className='border px-8 text-[14px] font-[600] bg-[#8DD3BB]  mx-1 py-[11.5px]'>Book now</button>
+</Link>
 </div>
 
     </div>

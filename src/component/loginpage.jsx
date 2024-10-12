@@ -12,9 +12,7 @@ export default function LoginPage2(){
 
     
     
-    console.log(user1)
-    
-    
+  
 
 const auth = getAuth();
 async function login(e){
@@ -24,6 +22,7 @@ async function login(e){
   .then((userCredential) => {
     // Signed in 
     console.log("sign in")
+    window.location.href="/page2"
     const user = userCredential.user;
     // ...
 

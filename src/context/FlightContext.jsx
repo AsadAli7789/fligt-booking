@@ -32,7 +32,7 @@ function ThemeContextProvider({ children }) {
         { flightName: "Delta 2020", company: "Delta Airlines", takeoffLocation: "New York (JFK)", landingLocation: "Seattle (SEA)", takeoffTime: "2024-10-29T11:00:00", landingTime: "2024-10-29T14:00:00", rating: 4.6, price: 450, duration: "6h 0m" },
         { flightName: "United 2121", company: "United Airlines", takeoffLocation: "San Francisco (SFO)", landingLocation: "Chicago (ORD)", takeoffTime: "2024-10-30T13:00:00", landingTime: "2024-10-30T19:00:00", rating: 4.3, price: 300, duration: "4h 0m" }
     ];
-  const [theme, setTheme] = useState([]);
+  const [theme, setTheme] = useState([flights]);
 
 
   return (

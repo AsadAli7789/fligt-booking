@@ -32,6 +32,8 @@ async function Add(password,email1,uid,url){
           url: url,
         });
         console.log("Document written with ID: ", docRef.id);
+        window.location.href="/page2"
+
 
       } catch (e) {
         console.error("Error adding document: ", e);

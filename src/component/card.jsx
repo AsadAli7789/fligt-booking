@@ -1,6 +1,6 @@
 export default function Card (){
     return <>
-    <div className="w-[43.75vw] border-none flex shadow-custom h-[29vh] mx-auto items-center mt-10 px-3 py-6">
+    <div className="w-[43.75vw] bg-white border-none flex shadow-custom h-[29vh] mx-auto items-center mt-10 px-3 py-6">
      <div className="  h-full w-1/4 "><img src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/image%2040.png?alt=media&token=5389d510-2d72-4695-b977-ae4e497342eb" alt="" /></div>
      <div className="  w-3/4 flex flex-col ">
 
