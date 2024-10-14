@@ -1,11 +1,44 @@
-import { useState } from "react"
-import { Button, Modal } from 'antd';
+import { useState,useEffect,useContext } from "react"
+import { Button, Modal, theme } from 'antd';
 import'./card_2_part2.css'
+import { getAuth, signInWithEmailAndPassword,signOut  } from "firebase/auth";
+import { app } from "../utils/utils";
+import { AuthContext } from "../context/UserContext";
+import { collection, addDoc,getFirestore,getDocs } from "firebase/firestore"; 
+
 export default function Card_2_part_2(){
-    
+  const {user1,setUser1} = useContext(AuthContext)
+console.log(user1)
     const [on , seton] = useState(true)
+    const [data , setdata] = useState({
+      cardNumber: "",
+      cvc:"",
+      nameCArd:"",
+      region:"",
+      expdate:"",
+      uid:"",
+      
+    })
+    const db = getFirestore(app);
+   
+
+    async function Add(data){
+      try {
+          const docRef = await addDoc(collection(db, "cards"),data);
+          console.log("Document written with ID: ", docRef.id);
+          
+  
+  
+        } catch (e) {
+          console.error("Error adding document: ", e);
+        }
+        
+  }
+  
 
 
+   
+   // Only run once when the component mounts
 
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
@@ -17,6 +50,7 @@ export default function Card_2_part_2(){
       setModalText('The modal will be closed after two seconds');
       setConfirmLoading(true);
       setTimeout(() => {
+        Add(data)
         setOpen(false);
         setConfirmLoading(false);
       }, 2000);
@@ -34,7 +68,7 @@ export default function Card_2_part_2(){
 
 
 
-
+console.log(data)
 
 
 
@@ -117,7 +151,12 @@ export default function Card_2_part_2(){
 
 <div className="coolinput1 mx-auto">
     <label for="input2" className="text">Card Number</label>
- <input type="text" className="input2 w-[26.6vw] rounded-md" placeholder="4321 4321 4321 4321" />
+ <input type="text" placeholder="4321 4321 4321 4321" className="input2 w-[26.6vw] rounded-md"  onChange={(e)=>{
+  setdata((prevData) => ({
+    ...prevData, // Spread the previous state
+    cardNumber: e.target.value, // Update the cvc field
+  }));
+  }}   />
 
 
 </div>
@@ -126,13 +165,23 @@ export default function Card_2_part_2(){
             <div className="border border black flex my-2 w-[26.667vw]">
             <div className="coolinput1 mr-1 ">
     <label for="input2" className="text">Exp. Dater</label>
- <input type="text" className="input2 rounded-md w-[13vw]"  placeholder="4321 4321 4321 4321" />
+    <input type="date"  onChange={(e)=>{
+  setdata((prevData) => ({
+    ...prevData, // Spread the previous state
+    expdate: e.target.value, // Update the cvc field
+  }));
+  }}  className="input2 w-[12.6vw] rounded-md"  placeholder="4321 4321 4321 4321" />
 
 
 </div>
 <div className="coolinput1 ml-1">
     <label for="input2" className="text">CVC</label>
- <input type="text" className="input2  w-[13vw] rounded-md "  placeholder="4321 4321 4321 4321" />
+    <input type="text"  onChange={(e)=>{
+  setdata((prevData) => ({
+    ...prevData, // Spread the previous state
+    cvc: e.target.value, // Update the cvc field
+  }));
+  }}  className="input2 w-[12.6vw] rounded-md"  placeholder="4321 4321 4321 4321" />
 
 
 </div>
@@ -142,18 +191,39 @@ export default function Card_2_part_2(){
             <div className="my-2">
             <div className="coolinput1 mx-auto">
     <label for="input2" className="text">Name on Card</label>
- <input type="text" className="input2 w-[26.6vw] rounded-md" placeholder="4321 4321 4321 4321" />
+ <input type="text"   onChange={(e)=>{
+  setdata((prevData) => ({
+    ...prevData, // Spread the previous state
+    nameCArd: e.target.value, // Update the cvc field
+  }));
+  }}  className="input2 w-[26.6vw] rounded-md"  placeholder="4321 4321 4321 4321" />
 
 
 </div>
             </div>
-            <div className=" my-2">
+            <div className="my-2">
             <div className="coolinput1 mx-auto ">
     <label for="input2" className="text">Country or Region</label>
- <select name="" id="" className="input2 w-[26.6vw]  rounded-md">
-    <option value="">UnitedState</option>
-    <option value="pakistan">pakistan</option>
- 
+ <select name="" id="" className="input2 w-[26.6vw]  rounded-md" onChange={(e)=>{
+  setdata((prevData) => ({
+    ...prevData, // Spread the previous state
+    region: e.target.value, // Update the cvc field
+  }));
+  }}>
+    <option value="">-</option>
+    <option value="">Select a region</option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Germany">Germany</option>
+        <option value="France">France</option>
+        <option value="China">China</option>
+        <option value="India">India</option>
+        <option value="Australia">Australia</option>
+        <option value="AU">Pakistan</option>
+
  
  
  </select>
@@ -166,7 +236,11 @@ export default function Card_2_part_2(){
                 <span className="text-[14px] font-[500] ml-2 ">Securely save my information for 1-click checkout</span>
             </div>
             <div className="w-full">
-                <button className="w-full bg-[#8DD3BB]  py-3 text-[14px] font-[600] leading-[17px] my-2">Add Card</button>
+                <button className="w-full bg-[#8DD3BB]  py-3 text-[14px] font-[600] leading-[17px] my-2" onClick={()=>{ 
+                  if (user1){setdata((dta)=>({...dta,uid:user1.uid}))}
+                 }
+                  
+              } >Add Card</button>
             </div>
             <div className="w-full text-[12px] font-[400] leading-[14px] flex text-center my-2">
             By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.

@@ -2,13 +2,11 @@ import {Avatar} from "antd"
 
 import { useContext, useState } from 'react'
 import './nav-bar-2.css'
-import  { ThemeContext} from "../context/FlightContext"
 export default function Example2() {
 
 const [btn , setbtn]= useState(true)
 
-const {theme,setTheme} = useContext(ThemeContext)
-console.log(theme)
+
   return (
     <>
     <div>

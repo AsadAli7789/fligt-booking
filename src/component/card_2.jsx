@@ -1,8 +1,43 @@
 import { useState } from "react"
 import Card_2_part_1 from "./card_2part_1"
+import { useContext } from 'react'
+import {ThemeContext} from '../context/FlightContext'
+import { Link,useParams } from 'react-router-dom'
+
+import { MyContext } from '../context/emailContext';
+import Card_2_part_2 from "./card_2_part2"
 
 export default function Card_2(){
+
+    const { state, setState } = useContext(MyContext);
+
+
+
+console.log(state)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const [on , seton] = useState(true)
+const { id } = useParams();
+const {theme,settheme} = useContext(ThemeContext)
+console.log(theme)
+const flight = theme.filter(flig =>flig.id == id)
+
+const {rating,price,shortTakeoffLocation,shortLandingLocation,duration,takeoffTime,landingTime, company ,logo}= flight[0]
 return<>
 
 
@@ -10,12 +45,12 @@ return<>
 <div className=" flex-col flex ">
     <div className='flex w-[41.146vw]  flex flex-col py-8 px-2 mt-3 rounded-lg shadow-custom 	 border bg-white' >
 <div className=' flex   '>
-    <div className=' text-[20px] font-[700] leading-[20px] flex-1'>Return Wed, Dec 8</div><div className=' text-[20px] font-[500] leading-[20px] border-black flex-2'>2h 28m</div>
+    <div className=' text-[20px] font-[700] leading-[20px] flex-1'>Return Wed, Dec 8</div><div className=' text-[20px] font-[500] leading-[20px] border-black flex-2'>{duration}</div>
 </div>
 <div className='  flex p-3 justify-between'> 
     <div className='flex p-6   border shadow-sm          '>
-    <div className=' '><img className='w-[64px]' src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/kisspng-dubai-airbus-a380-emirates-airline-logo-5adaedbb89d2d6%201.png?alt=media&token=d274a283-efab-4ea6-9aec-bf2ea7572994" alt="" /></div>
-    <div className='flex flex-col ml-2 '><span>Emirates</span>
+    <div className=' '><img className='w-[64px]' src={logo} alt="" /></div>
+    <div className='flex flex-col ml-2 '><span>{company}</span>
     <span>Airbus A320</span></div>
     </div>
 <div className=' flex flex-2 h-full'>
@@ -112,8 +147,11 @@ return<>
 </div>
 
 
+{
+    state==true?<Card_2_part_2/>:<Card_2_part_1/>
+}
 
-<Card_2_part_1/>
+
 
 
 

@@ -56,7 +56,7 @@ async function login(e){
             <button type="submit" className="border border-black">asad</button>
         </form>
     </div>
-    <button onClick={()=>{logOut()
+    <button  onClick={()=>{logOut()
         setlogout(true)
        
     }} className="border border-black p-5">logOut</button>

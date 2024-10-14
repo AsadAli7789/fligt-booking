@@ -1,15 +1,63 @@
+import React, { useState , useContext} from 'react';
+import emailjs from 'emailjs-com';
+import { data } from 'autoprefixer';
+import { MyContext } from '../context/emailContext';
+
+
 export default function Card_2_part_1(){
-  
+    const [formData, setFormData] = useState({
+        name: 'Asad',
+        email: '',
+        message: '',
+      });
+      const { state, setState } = useContext(MyContext);
+
+  const [Data,setData ] = useState()
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+      };
+    
+      const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs
+          .send('service_27tmpqo', 'template_qj8yyxd', formData, 'xyfkoEuMzwN0KSP94')
+          .then((response) => {
+            console.log('Email sent successfully!', response.status, response.text);
+            // Clear the form or show a success message
+            setState(true)
+          })
+          .catch((error) => {
+            console.error('Failed to send email:', error);
+          });
+      };
+
+
+
+
+
+
+
+
+
+
 
     return<>
     
     <div className=" w-[41.146vw]    p-8 rounded-lg bg-white shadow-custom mt-5  flex flex-col mx-auto ">
         <div className="flex flex-col ">
+        <form  onSubmit={sendEmail}>
         <h1 className="text-[25px] leading-[25px] font-[700] my-2 ">Login or Sign up to book</h1>
-        <input type="text" className="border border-black my-3 p-4 text-[16px] font-[400] leading-[20px] " placeholder="Phone Number" />
+   
+        <input    type="email"
+        name="email"
+        placeholder="Your Email" className="border w-full pr-5 border-black my-3 p-4 text-[16px] font-[400] leading-[20px] "  />
+       
         <h1 className="text-[14px] leading-[17px] font-[400] my-2">We’ll call or text you to confirm your number. Standard message and data rates apply. Privacy Policy
         </h1>
-        <button className=" text-[16px] leading-[19px] my-2 font-[500] py-3 bg-[#8DD3BB]">Continue</button>
+        <button type='submit' className=" text-[16px] leading-[19px] my-2 font-[500] py-3 w-full bg-[#8DD3BB]">Continue</button>
+        </form>
 <div className="flex items-center justify-center  my-2">
    <div className="border-black border-t-[.5px] w-[45%]"></div>
    <div className="w-[10%] flex justify-center text-[16px] font-[500] leading-[20px]">Or</div>

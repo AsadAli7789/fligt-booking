@@ -1,9 +1,18 @@
-import { Link } from 'react-router-dom'
+import { Link,useParams } from 'react-router-dom'
 import './image_gallery.css'
 import Input from './input'
+import { useContext } from 'react'
+import {ThemeContext} from '../context/FlightContext'
+
 
 export default function Image_galery(){
-    return<>
+      const { id } = useParams();
+  const {theme,settheme} = useContext(ThemeContext)
+  console.log(theme)
+const flight = theme.filter(flig =>flig.id == id)
+const {rating,price,shortTakeoffLocation,shortLandingLocation,duration,takeoffTime,landingTime, company ,logo}= flight[0]
+console.log()
+return<>
     <div className='bg-[#FAFBFC]' >
 
 
@@ -23,17 +32,17 @@ export default function Image_galery(){
 
 
     <div className=' flex-1'>
-        <h1 className='text-[24px] my-1 mt-1 font-[700] leading-[30px]'>Emirates A380 Airbus</h1>
+        <h1 className='text-[24px] my-1 mt-1 font-[700] leading-[30px]'>{flight[0].flightName}</h1>
         <h1 className='text-[14px] my-1'><svg width="18" className='inline' height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9 7.875C9.62132 7.875 10.125 7.37132 10.125 6.75C10.125 6.12868 9.62132 5.625 9 5.625C8.37868 5.625 7.875 6.12868 7.875 6.75C7.875 7.37132 8.37868 7.875 9 7.875Z" fill="#112211"/>
 <path d="M9 1.125C5.89852 1.125 3.375 3.53848 3.375 6.50391C3.375 7.91613 4.01871 9.79418 5.2882 12.086C6.30773 13.9261 7.48723 15.59 8.1007 16.418C8.20437 16.5594 8.33991 16.6745 8.49633 16.7538C8.65276 16.8331 8.82567 16.8744 9.00105 16.8744C9.17644 16.8744 9.34935 16.8331 9.50578 16.7538C9.6622 16.6745 9.79774 16.5594 9.90141 16.418C10.5138 15.59 11.6944 13.9261 12.7139 12.086C13.9813 9.79488 14.625 7.91684 14.625 6.50391C14.625 3.53848 12.1015 1.125 9 1.125ZM9 9C8.55499 9 8.11998 8.86804 7.74997 8.62081C7.37996 8.37357 7.09157 8.02217 6.92127 7.61104C6.75097 7.1999 6.70642 6.7475 6.79323 6.31105C6.88005 5.87459 7.09434 5.47368 7.40901 5.15901C7.72368 4.84434 8.12459 4.63005 8.56105 4.54323C8.9975 4.45642 9.4499 4.50097 9.86104 4.67127C10.2722 4.84157 10.6236 5.12996 10.8708 5.49997C11.118 5.86998 11.25 6.30499 11.25 6.75C11.2493 7.34654 11.0121 7.91846 10.5903 8.34027C10.1685 8.76209 9.59654 8.99935 9 9Z" fill="#112211"/>
 </svg>
-Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
+{flight[0].takeoffLocation} - {flight[0].landingLocation}
 </h1>
-        <h1 className='my-1 '><button className='py-1 px-2 rounded-md  border border-black' >4.2</button><span className='text-[12px] mx-1 font-[700]'>Very Good</span> <span className='text-[12px] font-[500]'>54 reviews</span> </h1>
+        <h1 className='my-1 '><button className='py-1 px-2 rounded-md  border border-black' >{rating}</button><span className='text-[12px] mx-1 font-[700]'>Very Good</span> <span className='text-[12px] font-[500]'>54 reviews</span> </h1>
     </div>
     <div className=' flex items-end justify-end flex-2 px-6 flex-col flex'>
-<div className='text-[32px] text-[#FF8682] font-[700]'>$240</div>
+<div className='text-[32px] text-[#FF8682] font-[700]'>${price}</div>
 <div><button className='border px-4 py-[15px] mx-1'><svg className='w-[15px] h-[11px]'  viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.7863 1.125C10.2504 1.125 9.0004 3.625 9.0004 3.625C9.0004 3.625 7.7504 1.125 5.21446 1.125C3.15352 1.125 1.52149 2.84922 1.5004 4.90664C1.45743 9.17734 4.88829 12.2145 8.64884 14.7668C8.75251 14.8373 8.87501 14.8751 9.0004 14.8751C9.12579 14.8751 9.24829 14.8373 9.35196 14.7668C13.1121 12.2145 16.543 9.17734 16.5004 4.90664C16.4793 2.84922 14.8473 1.125 12.7863 1.125V1.125Z" stroke="#112211" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -44,7 +53,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
 </svg>
 
 </button>
-<Link to={"/page2/Page4"}>
+<Link to={`/page2/Page6/:id/${id}`}>
 <button className='border px-8 text-[14px] font-[600] bg-[#8DD3BB]  mx-1 py-[11.5px]'>Book now</button>
 </Link>
 </div>
@@ -84,7 +93,7 @@ Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
         </div>
         <div className='w-[75.122vw]   my-2  h-full flex flex-col bg-[#8DD3BB99] mb-8 p-2 rounded-lg'>
             
-        <div className='text-[24px] leading-[30px] font-[700] py-4'>Emirates Airlines Policies</div>    
+        <div className='text-[24px] leading-[30px] font-[700] py-4'>{company} Policies</div>    
         <div className=' flex py-2'>
             <div className='  text-[16px] leading-[20px] font-[500] pr-8'><svg width="18" height="20" className='inline mr-2' viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.125 1.82031V1.375C10.125 1.07663 10.0065 0.790483 9.7955 0.579505C9.58452 0.368526 9.29837 0.25 9 0.25C8.70164 0.25 8.41549 0.368526 8.20451 0.579505C7.99353 0.790483 7.875 1.07663 7.875 1.375V1.82031C6.45433 1.99866 5.09716 2.51513 3.91735 3.32641L3.42188 2.82812C3.21053 2.61678 2.92389 2.49805 2.625 2.49805C2.32612 2.49805 2.03947 2.61678 1.82813 2.82812C1.61678 3.03947 1.49805 3.32611 1.49805 3.625C1.49805 3.92389 1.61678 4.21053 1.82813 4.42188L2.23125 4.825C0.791348 6.46272 -0.00195218 8.5693 3.6077e-06 10.75C3.6077e-06 15.7127 4.03735 19.75 9 19.75C13.9627 19.75 18 15.7127 18 10.75C18 6.16844 14.5584 2.37531 10.125 1.82031ZM9 13C8.46935 12.9998 7.95583 12.8121 7.55016 12.4701C7.14449 12.128 6.87279 11.6535 6.78305 11.1305C6.69331 10.6075 6.79131 10.0696 7.05974 9.61184C7.32817 9.15409 7.74975 8.80594 8.25 8.62891V5.125C8.25 4.92609 8.32902 4.73532 8.46967 4.59467C8.61033 4.45402 8.80109 4.375 9 4.375C9.19892 4.375 9.38968 4.45402 9.53033 4.59467C9.67099 4.73532 9.75 4.92609 9.75 5.125V8.62891C10.2503 8.80594 10.6718 9.15409 10.9403 9.61184C11.2087 10.0696 11.3067 10.6075 11.217 11.1305C11.1272 11.6535 10.8555 12.128 10.4498 12.4701C10.0442 12.8121 9.53066 12.9998 9 13Z" fill="#112211"/>
@@ -103,12 +112,12 @@ Pre-flight health screening questions.
 
 <div className='flex w-[75.122vw]  flex flex-col py-8 px-2 mt-3 rounded-lg shadow-2xl 	 border bg-white' >
 <div className=' flex   '>
-    <div className=' text-[20px] font-[700] leading-[20px] flex-1'>Return Wed, Dec 8</div><div className='text-[20px] font-[500] leading-[20px] border-black flex-2'>2h 28m</div>
+    <div className=' text-[20px] font-[700] leading-[20px] flex-1'>Return Wed, Dec 8</div><div className='text-[20px] font-[500] leading-[20px] border-black flex-2'>{duration}</div>
 </div>
 <div className='  flex p-3 justify-between'> 
     <div className='flex p-6   border shadow-sm          '>
-    <div className=' '><img className='w-[64px]' src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/kisspng-dubai-airbus-a380-emirates-airline-logo-5adaedbb89d2d6%201.png?alt=media&token=d274a283-efab-4ea6-9aec-bf2ea7572994" alt="" /></div>
-    <div className='flex flex-col ml-2 '><span>Emirates</span>
+    <div className=' '><img className='w-[64px]' src={logo} alt="" /></div>
+    <div className='flex flex-col ml-2 '><span>{company}</span>
     <span>Airbus A320</span></div>
     </div>
 <div className=' flex flex-2 h-full'>
@@ -160,8 +169,8 @@ Pre-flight health screening questions.
      
 <div className='flex mx-auto text-center py-1'>
     <div className='mx-2 flex my-auto '>
-        <span className='text-[24px] leading-[30px] font-[600]'>12:00 pm</span>
-        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Newark(EWR)</span>
+        <span className='text-[24px] leading-[30px] font-[600]'>{takeoffTime}</span>
+        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Pakistan({shortTakeoffLocation})</span>
     </div>
     <div className='mx-2'><svg width="174" height="48" viewBox="0 0 174 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.66667 24C5.66667 22.5272 4.47276 21.3333 3 21.3333C1.52724 21.3333 0.333336 22.5272 0.333336 24C0.333336 25.4728 1.52724 26.6667 3 26.6667C4.47276 26.6667 5.66667 25.4728 5.66667 24ZM39 23.5L3 23.5L3 24.5L39 24.5L39 23.5Z" fill="black"/>
@@ -170,8 +179,8 @@ Pre-flight health screening questions.
 </svg>
 </div>
     <div className='mx-2 flex my-auto'>
-        <span className='text-[24px] leading-[30px] font-[600]'>12:00 pm</span>
-        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Newark(EWR)</span>
+        <span className='text-[24px] leading-[30px] font-[600]'>{landingTime}</span>
+        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Pakistan({shortLandingLocation})</span>
     </div>
     <div></div>
 </div>
@@ -181,12 +190,12 @@ Pre-flight health screening questions.
 
 <div className='flex w-[75.122vw]  flex flex-col py-8 px-2 mt-3 rounded-lg shadow-2xl 	 border bg-white' >
 <div className=' flex   '>
-    <div className=' text-[20px] font-[700] leading-[20px] flex-1'>Return Wed, Dec 8</div><div className=' text-[20px] font-[500] leading-[20px] border-black flex-2'>2h 28m</div>
+    <div className=' text-[20px] font-[700] leading-[20px] flex-1'>Return Wed, Dec 8</div><div className=' text-[20px] font-[500] leading-[20px] border-black flex-2'>{duration}</div>
 </div>
 <div className='  flex p-3 justify-between'> 
     <div className='flex p-6   border shadow-sm          '>
-    <div className=' '><img className='w-[64px]' src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/kisspng-dubai-airbus-a380-emirates-airline-logo-5adaedbb89d2d6%201.png?alt=media&token=d274a283-efab-4ea6-9aec-bf2ea7572994" alt="" /></div>
-    <div className='flex flex-col ml-2 '><span>Emirates</span>
+    <div className=' '><img className='w-[64px]' src={logo} alt="" /></div>
+    <div className='flex flex-col ml-2 '><span>{company}</span>
     <span>Airbus A320</span></div>
     </div>
 <div className=' flex flex-2 h-full'>
@@ -238,8 +247,8 @@ Pre-flight health screening questions.
      
 <div className='flex mx-auto text-center py-1'>
     <div className='mx-2 flex my-auto '>
-        <span className='text-[24px] leading-[30px] font-[600]'>12:00 pm</span>
-        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Newark(EWR)</span>
+        <span className='text-[24px] leading-[30px] font-[600]'>{takeoffTime}</span>
+        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Pakistan({shortTakeoffLocation})</span>
     </div>
     <div className='mx-2'><svg width="174" height="48" viewBox="0 0 174 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.66667 24C5.66667 22.5272 4.47276 21.3333 3 21.3333C1.52724 21.3333 0.333336 22.5272 0.333336 24C0.333336 25.4728 1.52724 26.6667 3 26.6667C4.47276 26.6667 5.66667 25.4728 5.66667 24ZM39 23.5L3 23.5L3 24.5L39 24.5L39 23.5Z" fill="black"/>
@@ -248,8 +257,8 @@ Pre-flight health screening questions.
 </svg>
 </div>
     <div className='mx-2 flex my-auto'>
-        <span className='text-[24px] leading-[30px] font-[600]'>12:00 pm</span>
-        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Newark(EWR)</span>
+        <span className='text-[24px] leading-[30px] font-[600]'>{landingTime}</span>
+        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Pakistan({shortLandingLocation})</span>
     </div>
     <div></div>
 </div>

@@ -1,19 +1,24 @@
 import "./page6.css"
-import { useState,useContext } from 'react'
+import { useState,useContext, } from 'react'
 import Asad from '../component/Datepicker'
 import { Link } from 'react-router-dom'
 import Dropdown from "../component/dropdown"
 import Card from "../component/card"
 import Sort from "../component/sort"
 import Example2 from "../component/nav-bar-2"
-import ThemeContext from '../context/UserContext'
+import {ThemeContext} from '../context/FlightContext'
 
 
 export default function Page6(){
-    const {theme,settheme}= useContext(ThemeContext)
+    const {theme,settheme} = useContext(ThemeContext)
     console.log(theme)
-    const [btn , setbtn]= useState(true)
 
+
+    const [btn2 , setbtn2]= useState("")
+
+    const [btn , setbtn]= useState("")
+    const karachiFlights = theme.filter(flight => flight.takeoffLocation.includes(btn) && flight.landingLocation.includes(btn2));
+    console.log(btn)
     return<>
     <div className="w-[100vw] bg-[#FAFBFC]">
         <div className="mb-[3vw] w-full bg-white">
@@ -27,8 +32,15 @@ export default function Page6(){
 <div className='flex lg:flex-row'>
 <div className="coolinput mx-9 ">
     <label for="input" className="text">From to Pakistan</label>
-    <select name="" id="" className='input1 border border-black'>
-      <option value="asad">asad</option>
+    <select name="" id="" className='input1 border border-black' onChange={(e)=>{setbtn(e.target.value)}} >
+    <option value=""></option>
+
+      <option value="Karachi">Karachi</option>
+      <option value="Lahore">Lahore</option>
+    <option value="Islamabad">Islamabad</option>
+    <option value="Multan">Multan</option>
+    <option value="Peshawar">Peshawar</option>
+    <option value="Quetta">Quetta</option>
     </select>
 </div>
 
@@ -37,8 +49,14 @@ export default function Page6(){
 <div className="coolinput1 mx-9">
     <label for="input2" className="text">Trip</label>
     <select name="" id="" className='input2 border border-black'>
-      
-      <option value="asad">asad</option>
+        <option value="">trip</option>
+    <option value="Karachi">Karachi</option>
+      <option value="Lahore">Lahore</option>
+    <option value="Islamabad">Islamabad</option>
+    <option value="Multan">Multan</option>
+    <option value="Peshawar">Peshawar</option>
+    <option value="Quetta">Quetta</option>
+    
     </select>
 </div>
 
@@ -51,8 +69,16 @@ export default function Page6(){
 
 <div className="coolinput mx-9 ">
     <label for="input" className="text">From to Pakistan</label>
-    <select name="" id="" className='input1 border border-black'>
-      <option value="asad">asad</option>
+    <select name="" id="" className='input1 border border-black' onChange={(e)=>{setbtn2(e.target.value)}} >
+    <option value=""></option>
+
+    <option value="Karachi">Karachi</option>
+      <option value="Lahore">Lahore</option>
+    <option value="Islamabad">Islamabad</option>
+    <option value="Multan">Multan</option>
+    <option value="Peshawar">Peshawar</option>
+    <option value="Quetta">Quetta</option>
+    
     </select>
 </div>
 
@@ -76,11 +102,16 @@ export default function Page6(){
         <Sort/>
         </div>
    
-        <div className="h-[1428px] border border-black">
+        <div className="h-[1300px] px-4 overflow-scroll mt-4 ">
+        {karachiFlights.map((data, ind) => (
+  <div className="" key={data.id}>{<Card id={data.id} src={data.logo} rating={data.rating} price={data.price} landingTime={data.landingTime} takeoffTime={data.takeoffTime} company={data.company} shortLandingLocation={data.shortLandingLocation}  shortTakeoffLocation={data.shortTakeoffLocation} duration={data.duration} />}</div>
+))}
 
-<button className="border border-black w-full my-4 py-3 bg-[#112211] text-white">show more result</button>
+
+
+
         </div>
-        
+    <button className="border border-black w-full my-4 py-3 bg-[#112211] text-white">show more result</button>    
     </div>
 </div>
 </div></>

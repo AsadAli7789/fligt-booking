@@ -1,19 +1,21 @@
-export default function Card (){
+import { Link } from "react-router-dom";
+
+export default function Card ({src,rating,price,shortTakeoffLocation,shortLandingLocation,duration,takeoffTime,landingTime, company ,id}){
     return <>
-    <div className="w-[43.75vw] bg-white border-none flex shadow-custom h-[29vh] mx-auto items-center mt-10 px-3 py-6">
-     <div className="  h-full w-1/4 "><img src="https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/image%2040.png?alt=media&token=5389d510-2d72-4695-b977-ae4e497342eb" alt="" /></div>
+    <div className="w-[43.75vw] bg-white border-none flex shadow-custom h-[29vh] mx-auto items-center mt-10 px-3 py-6 ">
+     <div className="  h-full w-1/4 bg-blend-color-burn		"><img className="" src={src} alt="" /></div>
      <div className="  w-3/4 flex flex-col ">
 
      <div className="w-[90%] my-auto 	 mx-auto">
             <div className="  border-none my-2   items-center flex justify-between  items-center">
                 <div className="" >
-                    <span className="border border-[#8DD3BB] px-[.8vw] rounded-[4px] text-center   py-[.4vw] text-[12px] ">4.2</span>
+                    <span className="border border-[#8DD3BB] px-[.8vw] rounded-[4px] text-center   py-[.4vw] text-[12px] ">{rating}</span>
                     <span className=" ml-2 text-center  text-[12px] font-[700] ">very Good </span>
                     <span className=" text-center text-[12px]  font-[500]">50 rewies</span>
                     </div>
                 <div className=" flex flex-col  py-1 px-1">
                     <div className="text-[12px] leading-[16px]">starting from</div>
-                    <div className="text-[24px] leading-[16px] mt-[2px] text-[#FF8682] font-[700]">$104</div>
+                    <div className="text-[24px] leading-[16px] mt-[2px] text-[#FF8682] font-[700]">${price}</div>
                 </div>
             </div>
 
@@ -25,14 +27,14 @@ export default function Card (){
                     <div><input type="checkbox" className="mr-3" /></div>
 
                         <div className="flex flex-col">
-                        <span className="flex text-[16px] font-[600] leading-[20px] ">12:00 pm - 12:00 pm </span><span className="font-[400] text-[14px] leading-[18px] text-[#112211] ">Emirates</span>
+                        <span className="flex text-[16px] font-[600] leading-[20px] ">{takeoffTime} - {landingTime} </span><span className="font-[400] text-[14px] leading-[18px] text-[#112211] ">{company}</span>
                         </div>
                     </div>
                     <div className="border-none   flex"><span className="leading-[20px] text-[14px] mb-auto ">none stop</span></div>
                     <div className="border-none">
 
                     <div className="flex flex-col">
-                        <span className="flex text-[16px] font-[600] leading-[20px] ">2h 28m </span><span className="font-[400] text-[14px] leading-[18px] text-[#112211] ">EWR-BNA</span>
+                        <span className="flex text-[16px] font-[600] leading-[20px] ">{duration} </span><span className="font-[400] text-[14px] leading-[18px] text-[#112211] ">{shortTakeoffLocation}-{shortLandingLocation}</span>
                         </div>
                     </div>
                 </div>
@@ -42,14 +44,14 @@ export default function Card (){
                     <div><input type="checkbox" className="mr-3" /></div>
 
                         <div className="flex flex-col">
-                        <span className="flex text-[16px] font-[600] leading-[20px] ">12:00 pm - 12:00 pm </span><span className="font-[400] text-[14px] leading-[18px] text-[#112211] ">Emirates</span>
+                        <span className="flex text-[16px] font-[600] leading-[20px] ">{takeoffTime} - {landingTime}</span><span className="font-[400] text-[14px] leading-[18px] text-[#112211] ">{company}</span>
                         </div>
                     </div>
                     <div className="border-none   flex"><span className="leading-[20px] text-[14px] mb-auto ">none stop</span></div>
                     <div className="border-none">
 
                     <div className="flex flex-col">
-                        <span className="flex text-[16px] font-[600] leading-[20px] ">2h 28m </span><span className="font-[400] text-[14px] leading-[18px] text-[#112211] ">EWR-BNA</span>
+                        <span className="flex text-[16px] font-[600] leading-[20px] ">{duration}</span><span className="font-[400] text-[14px] leading-[18px] text-[#112211] ">{shortTakeoffLocation}-{shortLandingLocation}</span>
                         </div>
                     </div>
                 </div>
@@ -64,7 +66,9 @@ export default function Card (){
 </button>
        </div>    
        <div>
+        <Link to={`/page2/Page6/${id}`}>
             <button className="border-none px-[10vw] ml-3 py-3 font-[600]  inline bg-[#8DD3BB]  ">View Deals</button>
+            </Link>
             </div>
             </div>
             
