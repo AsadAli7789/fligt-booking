@@ -62,8 +62,8 @@ const length = Object.keys(user1).length;
 {/* <Dropdown/> */}
 {/* <Card/> */}
 {/* <Sllider /> */}
-
-<BrowserRouter>
+<Page5/>
+{/* <BrowserRouter>
 <Routes>
 
   <Route path='/' element={ length==0?<Page1/>: 
@@ -75,12 +75,13 @@ const length = Object.keys(user1).length;
 
   <Route path="/page2/Page6/:id" element={<Page3/>} />
   <Route path='/page2/Page6/:id/:id' element={<Page4/>}></Route>
+  <Route path='/page2/Page6/:id/:id/:id' element={<Page5/>}></Route>
 
 
 
 
 </Routes>
-</BrowserRouter>
+</BrowserRouter> */}
 
   {/* <EmailForm/> */}
  

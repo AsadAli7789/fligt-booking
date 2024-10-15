@@ -102,8 +102,8 @@ return<>
      
 <div className='flex mx-auto text-center py-1'>
     <div className='mx-2 flex my-auto '>
-        <span className='text-[24px] leading-[30px] font-[600]'>12:00 pm</span>
-        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Newark(EWR)</span>
+        <span className='text-[24px] leading-[30px] font-[600]'>{takeoffTime}</span>
+        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Pakistan({shortTakeoffLocation})</span>
     </div>
     <div className='mx-2'><svg width="174" height="48" viewBox="0 0 174 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.66667 24C5.66667 22.5272 4.47276 21.3333 3 21.3333C1.52724 21.3333 0.333336 22.5272 0.333336 24C0.333336 25.4728 1.52724 26.6667 3 26.6667C4.47276 26.6667 5.66667 25.4728 5.66667 24ZM39 23.5L3 23.5L3 24.5L39 24.5L39 23.5Z" fill="black"/>
@@ -112,8 +112,8 @@ return<>
 </svg>
 </div>
     <div className='mx-2 flex my-auto'>
-        <span className='text-[24px] leading-[30px] font-[600]'>12:00 pm</span>
-        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Newark(EWR)</span>
+        <span className='text-[24px] leading-[30px] font-[600]'>{landingTime}</span>
+        <span className='text-[16px] mx-1 my-2 leading-[20px] font-[500]'>Pakistan({shortLandingLocation})</span>
     </div>
     <div></div>
 </div>
@@ -135,7 +135,7 @@ return<>
     <div className={on==false?" flex bg-[#8DD3BB]  w-full rounded-lg mt-3" : " flex   bg-white w-full rounded-lg mt-3"} onClick={()=>{seton(false)}}>
         <div className="w-3/4 ml-4 py-4"> 
         <h1 className="text-[16px] font-[700]">Pay part now, part later</h1>
-        <h1 className="text-[16px] font-[500] leading=[20px]">Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</h1></div>
+        <h1 className="text-[16px] font-[500] leading=[20px]">Pay {(price+(price-10/10*100)+(price-5/5*100) )/2} now, and the rest ( ${(price+(price-10/10*100)+(price-5/5*100) )/2} ) will be automatically charged to the same payment method on Nov 14, 2024. No extra fees.</h1></div>
         <div className="w-1/4 justify-end items-center flex mr-3">
             <input type="radio" checked={on==false&&true} />
         </div>
@@ -176,8 +176,8 @@ return<>
             <div className='  mx-2 my-2 flex flex-col'>
             <h1 className='text-[16px] my-1 mt-1 font-[600] leading-[20px]'>Ecnomy</h1>
 
-                    <h1 className='text-[20px] my-1 mt-1 font-[700] leading-[30px]'>Emirates A380 Airbus</h1>
-        <h1 className='my-1 '><button className='py-1 px-2 rounded-md  border border-black' >4.2</button><span className='text-[12px] mx-1 font-[700]'>Very Good</span> <span className='text-[12px] font-[500]'>54 reviews</span> </h1>
+                    <h1 className='text-[20px] my-1 mt-1 font-[700] leading-[30px]'>{flight[0].flightName}</h1>
+        <h1 className='my-1 '><button className='py-1 px-2 rounded-md  border border-black' >{rating}</button><span className='text-[12px] mx-1 font-[700]'>Very Good</span> <span className='text-[12px] font-[500]'>54 reviews</span> </h1>
     </div>
             </div>
         </div>
@@ -185,12 +185,12 @@ return<>
         <div><span className="text-[16px] leading-[20px] font-[500] my-3">Your booking is protected </span> <span className="text-[16px] leading-[20px] font-[700]">by golobe</span></div>
     <div className="border-t border-[#112211] my-3"></div>
     <div className="flex justify-between my-3"> <span className="text-[16px] font-[700] leading-[20px]">Price Detail</span></div>
-    <div className="flex justify-between my-3"> <span className="text-[16px] font-[500] leading-[20px]">Base Fare</span> <span className="text-[16px] font-[600] leading-[20px]">$400</span></div>
-    <div className="flex justify-between my-3"> <span className="text-[16px] font-[500] leading-[20px]">Discount</span> <span className="text-[16px] font-[600] leading-[20px]">$400</span></div>
-    <div className="flex justify-between my-3"> <span className="text-[16px] font-[500] leading-[20px]">Taxes</span> <span className="text-[16px] font-[600] leading-[20px]">$400</span></div>
-    <div className="flex justify-between my-3"> <span className="text-[16px] font-[500] leading-[20px]">Service Fee</span> <span className="text-[16px] font-[600] leading-[20px]">$400</span></div>
+    <div className="flex justify-between my-3"> <span className="text-[16px] font-[500] leading-[20px]">Base Fare</span> <span className="text-[16px] font-[600] leading-[20px]">${price}</span></div>
+    <div className="flex justify-between my-3"> <span className="text-[16px] font-[500] leading-[20px]">Discount</span> <span className="text-[16px] font-[600] leading-[20px]">0%</span></div>
+    <div className="flex justify-between my-3"> <span className="text-[16px] font-[500] leading-[20px]">Taxes</span> <span className="text-[16px] font-[600] leading-[20px]">10%</span></div>
+    <div className="flex justify-between my-3"> <span className="text-[16px] font-[500] leading-[20px]">Service Fee</span> <span className="text-[16px] font-[600] leading-[20px]">5%</span></div>
     <div className="border-t border-[#112211] my-3"></div>
-    <div className="flex justify-between my-3"> <span className="text-[16px] font-[700] leading-[20px]">Total</span> <span className="text-[16px] font-[600] leading-[20px]">$400</span></div>
+    <div className="flex justify-between my-3"> <span className="text-[16px] font-[700] leading-[20px]">Total</span> <span className="text-[16px] font-[600] leading-[20px]">${price+(price-10/10*100)+(price-5/5*100) }</span></div>
     
     
     </div>
