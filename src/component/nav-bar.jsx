@@ -2,10 +2,13 @@
 import { useState } from 'react'
 import './nav-bar.css'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from "../context/UserContext";
 
 export default function Example() {
 
 const [btn , setbtn]= useState(true)
+// const {user1,setUser1} = useContext(AuthContext)
 
 
   return (

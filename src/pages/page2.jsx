@@ -18,6 +18,7 @@ console.log(user1)
     const [btn , setbtn]= useState(true)
 
     return<>
+    <div className="overflow-hidden">
 <div>
   {
   length==0?<Example/>:<Example2/>}
@@ -134,6 +135,7 @@ Show Filghts</button>
 <div className="mt-[6vh]">
 
 <Footer/>
+</div>
 </div>
 
     </>

@@ -14,10 +14,9 @@
     right: 0; /* Stretch to the right */
     bottom: 0; /* Stretch to the bottom */
     background: linear-gradient(90deg, rgba(0, 35, 77, 0.63) 11.46%, rgba(0, 35, 77, 0) 77.37%);
-    z-index: ; /* Make sure it's above the background image, if used */
   }
   #kol{
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url("https://firebasestorage.googleapis.com/v0/b/asad-f3717.appspot.com/o/Frame%202608705.png?alt=media&token=4ac630d4-92b3-4271-b775-0fe4ab158861");
   }

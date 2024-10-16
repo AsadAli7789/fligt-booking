@@ -58,14 +58,17 @@ const length = Object.keys(user1).length;
 
 
 
-  {/* <LoginPage/> */}
-  
+{/* <Example2/>   */}
 {/* <Dropdown/> */}
 {/* <Card/> */}
 {/* <Sllider /> */}
 {/* <Page5/> */}
+<<<<<<< Updated upstream
 <CreditCard/>
 {/* <BrowserRouter>
+=======
+<BrowserRouter>
+>>>>>>> Stashed changes
 <Routes>
 
   <Route path='/' element={ length==0?<Page1/>: 
@@ -83,7 +86,7 @@ const length = Object.keys(user1).length;
 
 
 </Routes>
-</BrowserRouter> */}
+</BrowserRouter>
 
   {/* <EmailForm/> */}
  

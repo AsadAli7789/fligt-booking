@@ -49,6 +49,7 @@ console.log(user1)
     const handleOk = () => {
       setModalText('The modal will be closed after two seconds');
       setConfirmLoading(true);
+      merjan()
       setTimeout(() => {
         Add(data)
         setOpen(false);
@@ -63,7 +64,9 @@ console.log(user1)
 
 
 
-
+function merjan(){
+  if (user1){setdata((dta)=>({...dta,uid:user1.uid}))}
+}
 
 
 
@@ -236,11 +239,9 @@ console.log(data)
                 <span className="text-[14px] font-[500] ml-2 ">Securely save my information for 1-click checkout</span>
             </div>
             <div className="w-full">
-                <button className="w-full bg-[#8DD3BB]  py-3 text-[14px] font-[600] leading-[17px] my-2" onClick={()=>{ 
-                  if (user1){setdata((dta)=>({...dta,uid:user1.uid}))}
-                 }
+                <button className="w-full bg-[#8DD3BB]  py-3 text-[14px] font-[600] leading-[17px] my-2 " 
                   
-              } >Add Card</button>
+               >Add Card</button>
             </div>
             <div className="w-full text-[12px] font-[400] leading-[14px] flex text-center my-2">
             By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.
