@@ -43,6 +43,7 @@ import Page4 from './pages/page4'
 import Page3 from './pages/page3'
 import Page6 from './pages/page6'
 import EmailForm from './component/sendmail'
+import CreditCard from './component/creditcard'
  function  App() {
  
   const {user1,setUser1} = useContext(AuthContext)
@@ -62,7 +63,8 @@ const length = Object.keys(user1).length;
 {/* <Dropdown/> */}
 {/* <Card/> */}
 {/* <Sllider /> */}
-<Page5/>
+{/* <Page5/> */}
+<CreditCard/>
 {/* <BrowserRouter>
 <Routes>
 
