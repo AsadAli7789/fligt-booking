@@ -2,6 +2,7 @@ import {Avatar} from "antd"
 import { UserOutlined } from '@ant-design/icons';
 import React from 'react';
 import { useContext } from 'react'
+import { AuthContext } from "../context/UserContext"
 
 import { Link,useParams } from 'react-router-dom'
 import {ThemeContext} from '../context/FlightContext'
@@ -17,6 +18,7 @@ export default function Last_sec(){
     console.log(rating)
 
 
+    const {user1,setUser1} = useContext(AuthContext)
 
 
 
@@ -99,10 +101,10 @@ export default function Last_sec(){
      p-4 border-black  items-center bg-[#8DD3BB] ">
         <div className="flex   w-fit justify-center items-center">
             <div className=" flex items-center border-[2px] border-white w-fit rounded-full">
-            <Avatar size={50} src="https://s3-alpha-sig.figma.com/img/de42/3158/13dc5b2e20dc60002c5ebc10bec549e3?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UqdXOWTZtIcgIAoz5z0LGGNzWaTn-VsNTj3mhb99re7cylsrTDaGhCiArrk5yVKevRS6eRjQo72AEmpaGshYJdMMJHBdwnvg9A2uGlEZNtAA1cILZOztz-osv1ODNYwMg8n93aHPRSNWL3ban7MsA1HJWN2mfFw4xgj8Nq4K2RtxxMgDsQhzALyafl9VjF-qdFCEIfzCT2Kb2gJXxTK0YW2rnv0JzI1VDHZwLHJFiX2X3MDz2n6v3fpDRNi9w9HlJA-RL~4kkhsOr6IgL-orIa-052DP2DOFu6Z2BIkkmJNjY65XUsVGGdD2Vqb5mW99jF57bCh575RL0S5-aPjvig__"  />
+            <Avatar size={50} src={user1.url}  />
             </div>
             <div>
-                <h1 className="text-[20px] font-[700] leading-[25px]">James Doe</h1>
+                <h1 className="text-[20px] font-[700] leading-[25px]">{user1.name}</h1>
                 <h1 className="text-[14px] font-[400] leading-[20px]">Boarding Pass N’123</h1>
             </div>
         </div>

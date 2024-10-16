@@ -42,7 +42,6 @@ import Page2 from './pages/page2'
 import Page4 from './pages/page4'
 import Page3 from './pages/page3'
 import Page6 from './pages/page6'
-import EmailForm from './component/sendmail'
 import CreditCard from './component/creditcard'
  function  App() {
  
@@ -58,17 +57,8 @@ const length = Object.keys(user1).length;
 
 
 
-{/* <Example2/>   */}
-{/* <Dropdown/> */}
-{/* <Card/> */}
-{/* <Sllider /> */}
-{/* <Page5/> */}
-<<<<<<< Updated upstream
-<CreditCard/>
-{/* <BrowserRouter>
-=======
 <BrowserRouter>
->>>>>>> Stashed changes
+
 <Routes>
 
   <Route path='/' element={ length==0?<Page1/>: 
@@ -81,6 +71,8 @@ const length = Object.keys(user1).length;
   <Route path="/page2/Page6/:id" element={<Page3/>} />
   <Route path='/page2/Page6/:id/:id' element={<Page4/>}></Route>
   <Route path='/page2/Page6/:id/:id/:id' element={<Page5/>}></Route>
+  <Route path='/page2credit' element={<CreditCard/>}></Route>
+
 
 
 
@@ -88,7 +80,6 @@ const length = Object.keys(user1).length;
 </Routes>
 </BrowserRouter>
 
-  {/* <EmailForm/> */}
  
   
       </>

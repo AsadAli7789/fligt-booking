@@ -5,11 +5,16 @@ import { getAuth, signInWithEmailAndPassword,signOut  } from "firebase/auth";
 import { app } from "../utils/utils";
 import { AuthContext } from "../context/UserContext";
 import { collection, addDoc,getFirestore,getDocs } from "firebase/firestore"; 
+import {ThemeContext} from '../context/FlightContext'
+import { useParams } from "react-router-dom";
 
-export default function Card_2_part_2(){
+export default function Card_2_part_2({id}){
   const {user1,setUser1} = useContext(AuthContext)
 console.log(user1)
+
     const [on , seton] = useState(true)
+    const {theme,settheme} = useContext(ThemeContext)
+console.log(theme)
     const [data , setdata] = useState({
       cardNumber: "",
       cvc:"",
@@ -19,9 +24,10 @@ console.log(user1)
       uid:"",
       
     })
+    console.log(id)
     const db = getFirestore(app);
    
-
+  
     async function Add(data){
       try {
           const docRef = await addDoc(collection(db, "cards"),data);
@@ -54,6 +60,7 @@ console.log(user1)
         Add(data)
         setOpen(false);
         setConfirmLoading(false);
+        window.location.href=`/page2/Page6/:id/:id/${id}`
       }, 2000);
     };
     const handleCancel = () => {
@@ -200,6 +207,8 @@ console.log(data)
     nameCArd: e.target.value, // Update the cvc field
   }));
   }}  className="input2 w-[26.6vw] rounded-md"  placeholder="4321 4321 4321 4321" />
+
+
 
 
 </div>

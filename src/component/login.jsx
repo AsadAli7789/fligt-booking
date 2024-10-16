@@ -7,11 +7,13 @@ import { collection, addDoc,getFirestore,getDocs } from "firebase/firestore";
 import { AuthContext } from "../context/UserContext";
 import Example from "./nav-bar";
 import Footer from "./footer";
+import Spin1 from "./spin";
 
 
 export default function LoginPage(){
     const { register, handleSubmit } = useForm();
     const [data,setdata] = useState()
+    const [br,setbr] = useState(false)
 
     const {user1,setUser1} = useContext(AuthContext)
 
@@ -37,6 +39,7 @@ async function Add(password,email1,uid,url ,number,address,name,dob){
           address:address,
         });
         console.log("Document written with ID: ", docRef.id);
+        setbr(false)
         window.location.href="/page2"
 
 
@@ -50,7 +53,7 @@ async function Add(password,email1,uid,url ,number,address,name,dob){
 
 async function  createUser(auth, data){
    const email1 = data.email
-
+   setbr(true)
    const password= data.password
    const imag = data.pic[0]
    const dob = data.dob
@@ -160,7 +163,7 @@ return<>
         <input type="file"  required {...register("pic")} accept="image/*" className="border border-black rounded-md my-2" name="pic"  placeholder="pi"/>
         <div className="w-full flex itmes-center my-3"><input type="checkbox" className="inline"/> <h1 className="inline mx-2">I agree to all the <span className="text-[#FF8682]  text-[14px] leading-[17px] font-[600] " >Terms</span> and <span className="text-[#FF8682] text-[14px] leading-[17px] font-[600]" >Privacy Policies</span> </h1></div>
        <div className="border border-black w-full">
-        <input type="submit" className="border border-black block w-full flex  py-4 rounded-md  bg-[#8DD3BB]" value={"Create account"}/>
+        <input type="submit"  className="border border-black block w-full flex  py-4 rounded-md  bg-[#8DD3BB]" value={br==true?"loading...." :"Create account"}/>
         </div>
         <div className="flex flex-col">
 
@@ -191,8 +194,7 @@ return<>
 </div>
 </div>
   </div>
-    {/* <button onClick={()=>{logOut()
-    }} className="border border-black p-5">logOut</button> */}
+   
 
 
 </div>

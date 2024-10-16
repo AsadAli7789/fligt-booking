@@ -148,7 +148,7 @@ return<>
 
 
 {
-    state==true?<Card_2_part_2/>:<Card_2_part_1/>
+    state==true?<Card_2_part_2 id={id}/>:<Card_2_part_1/>
 }
 
 
