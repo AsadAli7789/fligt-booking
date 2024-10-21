@@ -43,6 +43,8 @@ import Page4 from './pages/page4'
 import Page3 from './pages/page3'
 import Page6 from './pages/page6'
 import CreditCard from './component/creditcard'
+import AdminDashboard from './pages/admin'
+import FlightBookingForm from './pages/form'
  function  App() {
  
   const {user1,setUser1} = useContext(AuthContext)
@@ -54,8 +56,8 @@ const length = Object.keys(user1).length;
 
   return (
     <>
-
-
+{/* <Page4/> */}
+{/* <CreditCard/> */}
 
 <BrowserRouter>
 
@@ -73,15 +75,15 @@ const length = Object.keys(user1).length;
   <Route path='/page2/Page6/:id/:id/:id' element={<Page5/>}></Route>
   <Route path='/page2credit' element={<CreditCard/>}></Route>
 
+  <Route path='/Admin' element={<AdminDashboard/>}></Route>
 
 
 
 
 </Routes>
 </BrowserRouter>
-
- 
-  
+{/* <FlightBookingForm/> */}
+  {/* <AdminDashboard/> */}
       </>
   )
 }

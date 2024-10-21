@@ -37,6 +37,7 @@ async function Add(password,email1,uid,url ,number,address,name,dob){
           number:number,
           dob: dob,
           address:address,
+          role:"user"
         });
         console.log("Document written with ID: ", docRef.id);
         setbr(false)

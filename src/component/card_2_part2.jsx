@@ -8,10 +8,10 @@ import { collection, addDoc,getFirestore,getDocs } from "firebase/firestore";
 import {ThemeContext} from '../context/FlightContext'
 import { useParams } from "react-router-dom";
 
-export default function Card_2_part_2({id}){
+export default function Card_2_part_2({ary,id}){
   const {user1,setUser1} = useContext(AuthContext)
 console.log(user1)
-
+console.log(ary)
     const [on , seton] = useState(true)
     const {theme,settheme} = useContext(ThemeContext)
 console.log(theme)
@@ -26,8 +26,25 @@ console.log(theme)
     })
     console.log(id)
     const db = getFirestore(app);
-   
+     
   
+    async function Add2(arry){
+      try {
+          const docRef = await addDoc(collection(db, "history"),arry);
+          console.log("Document written with ID: ", docRef.id);
+          
+  
+  
+        } catch (e) {
+          console.error("Error adding document: ", e);
+        }
+        
+  } 
+
+  
+
+
+
     async function Add(data){
       try {
           const docRef = await addDoc(collection(db, "cards"),data);
@@ -41,7 +58,15 @@ console.log(theme)
         
   }
   
+useEffect(()=>{
+  merjan()
+  },[user1])
+  
+  
 
+  function merjan(){
+    if (user1){setdata((dta)=>({...dta,uid:user1.uid}))}
+  }
 
    
    // Only run once when the component mounts
@@ -55,11 +80,13 @@ console.log(theme)
     const handleOk = () => {
       setModalText('The modal will be closed after two seconds');
       setConfirmLoading(true);
-      merjan()
+   
+      
       setTimeout(() => {
         Add(data)
         setOpen(false);
         setConfirmLoading(false);
+        Add2(ary)
         window.location.href=`/page2/Page6/:id/:id/${id}`
       }, 2000);
     };
@@ -71,9 +98,6 @@ console.log(theme)
 
 
 
-function merjan(){
-  if (user1){setdata((dta)=>({...dta,uid:user1.uid}))}
-}
 
 
 

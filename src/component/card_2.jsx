@@ -1,41 +1,61 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Card_2_part_1 from "./card_2part_1"
 import { useContext } from 'react'
 import {ThemeContext} from '../context/FlightContext'
 import { Link,useParams } from 'react-router-dom'
+import { AuthContext } from "../context/UserContext";
 
 import { MyContext } from '../context/emailContext';
 import Card_2_part_2 from "./card_2_part2"
 
 export default function Card_2(){
 
+    
     const { state, setState } = useContext(MyContext);
-
-
-
-console.log(state)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const {user1,setUser1} = useContext(AuthContext)
 
 const [on , seton] = useState(true)
 const { id } = useParams();
 const {theme,settheme} = useContext(ThemeContext)
 console.log(theme)
 const flight = theme.filter(flig =>flig.id == id)
+console.log(flight[0])
+const [ ary,setary ] = useState(flight[0])
+console.log(ary)
+
+
+
+
+
+
+function merjan1(){
+if (user1){setary((dta)=>({...dta,uid:user1.uid}))}
+  }
+
+
+
+
+console.log(ary)
+
+
+  useEffect(() => {
+    
+    merjan1()
+
+  }, [user1]);
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
 const {rating,price,shortTakeoffLocation,shortLandingLocation,duration,takeoffTime,landingTime, company ,logo}= flight[0]
 return<>
@@ -148,7 +168,7 @@ return<>
 
 
 {
-    state==true?<Card_2_part_2 id={id}/>:<Card_2_part_1/>
+    state==true?<Card_2_part_2 ary={ary} id={id}/>:<Card_2_part_1/>
 }
 
 
